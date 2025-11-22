@@ -1,0 +1,38 @@
+{
+  "private": true,
+  "scripts": {
+    "build": "next build",
+    "dev": "next",
+    "setup": "node ./lib/setup.js",
+    "start": "next start"
+  },
+  "dependencies": {
+    "@contentful/rich-text-react-renderer": "latest",
+    "@contentful/rich-text-types": "latest",
+    "@contentful/vercel-nextjs-toolkit": "latest",
+    "@tailwindcss/postcss": "latest",
+    "@tailwindcss/typography": "latest",
+    "@types/node": "^20.5.0",
+    "@types/react": "^18.2.20",
+    "@types/react-dom": "^18.2.7",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "contentful-import": "latest",
+    "date-fns": "latest",
+    "lucide-react": "^0.454.0",
+    "next": "latest",
+    "next-themes": "latest",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "tailwind-merge": "^2.5.5",
+    "tailwindcss": "^4.1.9",
+    "tailwindcss-animate": "^1.0.7",
+    "tw-animate-css": "latest",
+    "typescript": "^5.1.6"
+  },
+  "devDependencies": {
+    "@types/node": "^22",
+    "postcss": "^8.5",
+    "typescript": "^5"
+  }
+}
