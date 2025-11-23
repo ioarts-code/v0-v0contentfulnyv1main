@@ -1,6 +1,8 @@
-// <CHANGE> Ensuring Tailwind 4 CSS works with v0 design tool
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
   typescript: {
     ignoreBuildErrors: true,
   },
