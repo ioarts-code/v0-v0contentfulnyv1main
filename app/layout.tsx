@@ -1,6 +1,14 @@
 import type React from "react"
 import "./globals.css"
-import { Inter } from "next/font/google"
+
+import { Header } from "@/components/header"
+
+import { Inter, Geist as V0_Font_Geist, Geist_Mono as V0_Font_Geist_Mono, Source_Serif_4 as V0_Font_Source_Serif_4 } from 'next/font/google'
+
+// Initialize fonts
+const _geist = V0_Font_Geist({ subsets: ['latin'], weight: ["100","200","300","400","500","600","700","800","900"] })
+const _geistMono = V0_Font_Geist_Mono({ subsets: ['latin'], weight: ["100","200","300","400","500","600","700","800","900"] })
+const _sourceSerif_4 = V0_Font_Source_Serif_4({ subsets: ['latin'], weight: ["200","300","400","500","600","700","800","900"] })
 
 export const metadata = {
   title: "Blog",
@@ -13,16 +21,6 @@ const inter = Inter({
   subsets: ["latin"],
   display: "swap",
 })
-
-function Header() {
-  return (
-    <header className="border-b border-border">
-      <div className="container mx-auto px-5 py-6">
-        <h1 className="text-2xl font-bold">Blog</h1>
-      </div>
-    </header>
-  )
-}
 
 function Footer() {
   return (
@@ -40,7 +38,10 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className={inter.variable}>
+    <html lang="en" className={`${inter.variable}`}>
+      <head>
+        <link rel="stylesheet" href="https://use.typekit.net/rlu5ntk.css" />
+      </head>
       <body className="font-sans flex flex-col min-h-screen">
         <Header />
         <main className="flex-1">{children}</main>

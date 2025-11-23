@@ -33,18 +33,35 @@ export default async function PostPage({ params }: any) {
         ← Back to all posts
       </Link>
 
-      <article className="max-w-3xl mx-auto">
-        <h1 className="text-5xl font-bold mb-4">{post.title}</h1>
-
-        {post.date && (
-          <time className="text-muted-foreground">
-            {new Date(post.date).toLocaleDateString("en-US", {
-              year: "numeric",
-              month: "long",
-              day: "numeric",
-            })}
-          </time>
+      <article className="max-w-4xl mx-auto">
+        {post.image?.url && (
+          <div className="mb-8 rounded-lg overflow-hidden bg-muted">
+            <img src={post.image.url || "/placeholder.svg"} alt={post.title} className="w-full h-auto object-cover" />
+          </div>
         )}
+
+        <div className="flex items-start justify-between gap-4 mb-4">
+          <h1 className="text-5xl font-bold flex-1">{post.title}</h1>
+          {post.price && <div className="text-3xl font-bold text-primary whitespace-nowrap">${post.price}</div>}
+        </div>
+
+        <div className="flex items-center gap-4 text-muted-foreground mb-8">
+          {post.author && (
+            <>
+              <span className="font-medium text-foreground">{post.author}</span>
+              {post.date && <span>•</span>}
+            </>
+          )}
+          {post.date && (
+            <time>
+              {new Date(post.date).toLocaleDateString("en-US", {
+                year: "numeric",
+                month: "long",
+                day: "numeric",
+              })}
+            </time>
+          )}
+        </div>
 
         {post.content && (
           <div className="prose prose-lg mt-8 max-w-none">
