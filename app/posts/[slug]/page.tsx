@@ -18,7 +18,7 @@ export default async function PostPage({ params }: any) {
 
   if (!post) {
     return (
-      <div className="container mx-auto px-5 py-12">
+      <div className="container mx-auto px-4 md:px-5 py-8 md:py-12">
         <h1 className="text-3xl font-bold">Post not found</h1>
         <p className="mt-4 text-muted-foreground">The post you are looking for does not exist.</p>
         <Link href="/" className="mt-4 inline-block text-primary hover:underline">
@@ -29,7 +29,7 @@ export default async function PostPage({ params }: any) {
   }
 
   return (
-    <div className="container mx-auto px-5 py-12">
+    <div className="container mx-auto px-4 md:px-5 py-8 md:py-12">
       <Link href="/" className="inline-block mb-8 text-primary hover:underline">
         ← Back to all posts
       </Link>
@@ -41,9 +41,11 @@ export default async function PostPage({ params }: any) {
           </div>
         )}
 
-        <div className="flex items-start justify-between gap-4 mb-4">
-          <h1 className="text-5xl font-bold flex-1">{post.title}</h1>
-          {post.price && <div className="text-3xl font-bold text-primary whitespace-nowrap">${post.price}</div>}
+        <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-2 md:gap-4 mb-4">
+          <h1 className="text-3xl md:text-5xl font-bold flex-1">{post.title}</h1>
+          {post.price && (
+            <div className="text-2xl md:text-3xl font-bold text-primary whitespace-nowrap">${post.price}</div>
+          )}
         </div>
 
         <div className="flex items-center gap-4 text-muted-foreground mb-8">
@@ -65,7 +67,7 @@ export default async function PostPage({ params }: any) {
         </div>
 
         {post.content && (
-          <div className="prose prose-lg mt-8 max-w-none">
+          <div className="prose md:prose-lg mt-8 max-w-none">
             <Markdown content={post.content} />
           </div>
         )}

@@ -7,7 +7,7 @@ export default async function Page() {
   const allPosts = await getAllPosts(isEnabled)
 
   return (
-    <main className="container mx-auto px-5 py-12">
+    <main className="container mx-auto px-4 md:px-5 py-8 md:py-12">
       {allPosts.length === 0 ? (
         <div className="border-2 border-destructive rounded-lg p-8 bg-destructive/10">
           <h2 className="text-2xl font-bold mb-4 text-destructive-foreground">Contentful Setup Required</h2>
@@ -20,11 +20,11 @@ export default async function Page() {
           </p>
         </div>
       ) : (
-        <div className="space-y-8">
+        <div className="space-y-6 md:space-y-8">
           {allPosts.map((post) => (
-            <article key={post.slug} className="border-b border-border pb-8">
+            <article key={post.slug} className="border-b border-border pb-6 md:pb-8">
               <Link href={`/posts/${post.slug}`} className="group">
-                <h2 className="text-3xl font-bold mb-2 text-foreground group-hover:text-primary transition-colors">
+                <h2 className="text-2xl md:text-3xl font-bold mb-2 text-foreground group-hover:text-primary transition-colors">
                   {post.title}
                 </h2>
                 {post.date && (
