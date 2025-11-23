@@ -36,15 +36,23 @@ async function fetchGraphQL(query: string, preview = false): Promise<any> {
 
 function extractPost(fetchResponse: any): any {
   const post = fetchResponse?.data?.titleCollection?.items?.[0]
+  console.log("[v0] Fetching post, found:", post?.slug || "none")
   // Return null if the post doesn't exist or has critical missing data
   if (!post || !post.slug) return null
-  return post
+  return {
+    ...post,
+    date: post.sys?.publishedAt,
+  }
 }
 
 function extractPostEntries(fetchResponse: any): any[] {
   const items = fetchResponse?.data?.titleCollection?.items ?? []
-  // Filter out null entries caused by unresolvable links
-  return items.filter((item: any) => item !== null && item.slug)
+  return items
+    .filter((item: any) => item !== null && item.slug)
+    .map((item: any) => ({
+      ...item,
+      date: item.sys?.publishedAt,
+    }))
 }
 
 export async function getPreviewPostBySlug(slug: string | null): Promise<any> {
