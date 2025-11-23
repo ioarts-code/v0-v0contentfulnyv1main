@@ -9,13 +9,13 @@ export function Header() {
           home
         </Link>
         <Link href="/products" className="text-foreground hover:opacity-70 transition-opacity">
-          All products
+          make
         </Link>
       </nav>
 
       {/* Logo/Title */}
       <h1 className="absolute font-title leading-normal left-[108px] text-[128px] text-foreground top-[66px] whitespace-nowrap">
-        typeform
+        ioarts
       </h1>
 
       {/* Decorative line 1 */}

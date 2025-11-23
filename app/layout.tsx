@@ -2,8 +2,7 @@ import type React from "react"
 import "./globals.css"
 
 import { Header } from "@/components/header"
-
-import { Inter, Geist as V0_Font_Geist, Geist_Mono as V0_Font_Geist_Mono, Source_Serif_4 as V0_Font_Source_Serif_4 } from 'next/font/google'
+import { Geist as V0_Font_Geist, Geist_Mono as V0_Font_Geist_Mono, Source_Serif_4 as V0_Font_Source_Serif_4 } from 'next/font/google'
 
 // Initialize fonts
 const _geist = V0_Font_Geist({ subsets: ['latin'], weight: ["100","200","300","400","500","600","700","800","900"] })
@@ -15,12 +14,6 @@ export const metadata = {
   description: "A blog built with Next.js and Contentful.",
   generator: "v0.app",
 }
-
-const inter = Inter({
-  variable: "--font-inter",
-  subsets: ["latin"],
-  display: "swap",
-})
 
 function Footer() {
   return (
@@ -38,7 +31,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className={`${inter.variable}`}>
+    <html lang="en">
       <head>
         <link rel="stylesheet" href="https://use.typekit.net/rlu5ntk.css" />
       </head>
