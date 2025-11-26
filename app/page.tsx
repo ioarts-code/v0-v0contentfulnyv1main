@@ -57,10 +57,10 @@ export default async function Page() {
         <div className="relative w-full h-full flex items-center justify-center">
           <div className="relative w-[85%] h-[85%]">
             <Image
-              src="/images/7693.png"
+              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/7697-Ntg8tdO0OAu5V8yUHAVhfKyxeZlT3x.png"
               alt="Abstract design with geometric patterns"
               fill
-              className="object-contain bg-white rotate-45"
+              className="object-contain bg-white rotate-90 mb-0"
               priority
             />
           </div>
