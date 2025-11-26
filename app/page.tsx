@@ -1,47 +1,64 @@
 import Link from "next/link"
 import { draftMode } from "next/headers"
 import { getAllPosts } from "@/lib/api"
+import Image from "next/image"
 
 export default async function Page() {
   const { isEnabled } = await draftMode()
   const allPosts = await getAllPosts(isEnabled)
 
   return (
-    <main className="container mx-auto px-4 md:px-5 py-8 md:py-12">
-      {allPosts.length === 0 ? (
-        <div className="border-2 border-destructive rounded-lg p-8 bg-destructive/10">
-          <h2 className="text-2xl font-bold mb-4 text-destructive-foreground">Contentful Setup Required</h2>
-          <p className="mb-4 text-foreground">
-            Your Contentful space needs a <strong>"Blog Post"</strong> content type configured before this blog can
-            display posts.
-          </p>
-          <p className="text-sm text-muted-foreground">
-            See <code className="bg-muted px-2 py-1 rounded">CONTENTFUL_SETUP.md</code> for detailed instructions.
-          </p>
+    <div className="flex h-screen overflow-hidden">
+      {/* Left side - Scrollable posts */}
+      <main className="w-full md:w-1/2 overflow-y-auto px-4 md:px-8 py-8 md:py-12">
+        {allPosts.length === 0 ? (
+          <div className="border-2 border-destructive rounded-lg p-8 bg-destructive/10">
+            <h2 className="text-2xl font-bold mb-4 text-destructive-foreground">Contentful Setup Required</h2>
+            <p className="mb-4 text-foreground">
+              Your Contentful space needs a <strong>"Blog Post"</strong> content type configured before this blog can
+              display posts.
+            </p>
+            <p className="text-sm text-muted-foreground">
+              See <code className="bg-muted px-2 py-1 rounded">CONTENTFUL_SETUP.md</code> for detailed instructions.
+            </p>
+          </div>
+        ) : (
+          <div className="space-y-6 md:space-y-8">
+            {allPosts.map((post) => (
+              <article key={post.slug} className="border-b border-border pb-6 md:pb-8">
+                <Link href={`/posts/${post.slug}`} className="group">
+                  <h2 className="text-2xl md:text-3xl font-bold mb-2 text-foreground group-hover:text-primary transition-colors">
+                    {post.title}
+                  </h2>
+                  {post.date && (
+                    <time className="text-sm text-muted-foreground">
+                      {new Date(post.date).toLocaleDateString("en-US", {
+                        year: "numeric",
+                        month: "long",
+                        day: "numeric",
+                      })}
+                    </time>
+                  )}
+                  {post.excerpt && <p className="mt-2 text-muted-foreground leading-relaxed">{post.excerpt}</p>}
+                </Link>
+              </article>
+            ))}
+          </div>
+        )}
+      </main>
+
+      {/* Right side - Image (hidden on mobile) */}
+      <aside className="hidden md:block md:w-1/2 relative">
+        <div className="relative w-full h-full">
+          <Image
+            src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/7692-J1aMjCD9kS7Dn1oduuDnBU2tE4sLmL.png"
+            alt="Abstract design with geometric patterns"
+            fill
+            className="object-cover"
+            priority
+          />
         </div>
-      ) : (
-        <div className="space-y-6 md:space-y-8">
-          {allPosts.map((post) => (
-            <article key={post.slug} className="border-b border-border pb-6 md:pb-8">
-              <Link href={`/posts/${post.slug}`} className="group">
-                <h2 className="text-2xl md:text-3xl font-bold mb-2 text-foreground group-hover:text-primary transition-colors">
-                  {post.title}
-                </h2>
-                {post.date && (
-                  <time className="text-sm text-muted-foreground">
-                    {new Date(post.date).toLocaleDateString("en-US", {
-                      year: "numeric",
-                      month: "long",
-                      day: "numeric",
-                    })}
-                  </time>
-                )}
-                {post.excerpt && <p className="mt-2 text-muted-foreground leading-relaxed">{post.excerpt}</p>}
-              </Link>
-            </article>
-          ))}
-        </div>
-      )}
-    </main>
+      </aside>
+    </div>
   )
 }
