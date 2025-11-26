@@ -41,6 +41,7 @@ function extractPost(fetchResponse: any): any {
   if (!post || !post.slug) return null
   return {
     ...post,
+    image: post.image?.url || null,
     date: post.sys?.publishedAt,
   }
 }
@@ -51,6 +52,7 @@ function extractPostEntries(fetchResponse: any): any[] {
     .filter((item: any) => item !== null && item.slug)
     .map((item: any) => ({
       ...item,
+      image: item.image?.url || null,
       date: item.sys?.publishedAt,
     }))
 }

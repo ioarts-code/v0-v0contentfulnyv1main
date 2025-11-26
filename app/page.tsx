@@ -10,7 +10,7 @@ export default async function Page() {
   return (
     <div className="flex h-screen overflow-hidden">
       {/* Left side - Scrollable posts */}
-      <main className="w-full md:w-1/2 overflow-y-auto px-4 md:px-8 py-8 md:py-12">
+      <main className="w-full md:w-1/2 overflow-y-auto px-4 md:px-8 py-8 md:py-12 bg-white">
         {allPosts.length === 0 ? (
           <div className="border-2 border-destructive rounded-lg p-8 bg-destructive/10">
             <h2 className="text-2xl font-bold mb-4 text-destructive-foreground">Contentful Setup Required</h2>
@@ -27,6 +27,11 @@ export default async function Page() {
             {allPosts.map((post) => (
               <article key={post.slug} className="border-b border-border pb-6 md:pb-8">
                 <Link href={`/posts/${post.slug}`} className="group">
+                  {post.image && (
+                    <div className="relative w-full h-[100px] mb-4 overflow-hidden">
+                      <Image src={post.image || "/placeholder.svg"} alt={post.title} fill className="object-cover" />
+                    </div>
+                  )}
                   <h2 className="text-2xl md:text-3xl font-bold mb-2 text-foreground group-hover:text-primary transition-colors">
                     {post.title}
                   </h2>
@@ -51,10 +56,10 @@ export default async function Page() {
       <aside className="hidden md:block md:w-1/2 relative">
         <div className="relative w-full h-full">
           <Image
-            src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/7692-J1aMjCD9kS7Dn1oduuDnBU2tE4sLmL.png"
+            src="/images/7692.png"
             alt="Abstract design with geometric patterns"
             fill
-            className="object-cover"
+            className="object-cover bg-white"
             priority
           />
         </div>

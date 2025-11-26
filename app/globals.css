@@ -79,8 +79,8 @@
 
 @theme inline {
   --font-sans: "Montserrat", "Montserrat Fallback";
-  /* Updated to use PF Spine 3D Top variant */
-  --font-title: "pf-spine-3d-top", "pf-spine", "PF Spine", serif;
+  /* Updated to use Sedgwick Ave Display */
+  --font-title: "Sedgwick Ave Display", "Sedgwick Ave Display Fallback", cursive;
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-card: var(--card);

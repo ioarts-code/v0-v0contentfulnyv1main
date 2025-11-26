@@ -2,7 +2,7 @@ import Link from "next/link"
 
 export function Header() {
   return (
-    <header className="h-[200px] md:h-[361px] relative w-full bg-muted">
+    <header className="h-[200px] md:h-[361px] relative w-full bg-neutral-300">
       {/* Navigation Menu */}
       <nav className="absolute left-4 md:left-[108px] top-4 md:top-[20px] flex gap-4 md:gap-8 text-sm md:text-base">
         <Link href="/" className="text-foreground hover:opacity-70 transition-opacity">
