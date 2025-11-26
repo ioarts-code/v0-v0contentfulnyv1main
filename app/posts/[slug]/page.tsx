@@ -29,32 +29,27 @@ export default async function PostPage({ params }: any) {
   }
 
   return (
-    <div className="container mx-auto px-4 md:px-5 py-8 md:py-12">
-      <Link href="/" className="inline-block mb-8 text-primary hover:underline">
+    <div className="container mx-auto px-4 md:px-8 py-8 md:py-12 max-w-4xl">
+      <Link href="/" className="inline-block mb-8 text-foreground hover:opacity-70 transition-opacity">
         ← Back to all posts
       </Link>
 
-      <article className="max-w-4xl mx-auto">
-        {post.image?.url && (
-          <div className="mb-8 rounded-lg overflow-hidden bg-muted">
-            <img src={post.image.url || "/placeholder.svg"} alt={post.title} className="w-full h-auto object-cover" />
+      <article>
+        {post.image && (
+          <div className="mb-8">
+            <img
+              src={post.image || "/placeholder.svg"}
+              alt={post.title}
+              className="w-full h-auto object-cover rounded-lg"
+            />
           </div>
         )}
 
-        <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-2 md:gap-4 mb-4">
-          <h1 className="text-3xl md:text-5xl font-bold flex-1">{post.title}</h1>
-          {post.price && (
-            <div className="text-2xl md:text-3xl font-bold text-primary whitespace-nowrap">${post.price}</div>
-          )}
-        </div>
+        <h1 className="text-3xl md:text-5xl font-bold mb-4">{post.title}</h1>
 
-        <div className="flex items-center gap-4 text-muted-foreground mb-8">
-          {post.author && (
-            <>
-              <span className="font-medium text-foreground">{post.author}</span>
-              {post.date && <span>•</span>}
-            </>
-          )}
+        <div className="flex flex-wrap items-center gap-3 text-sm md:text-base text-muted-foreground mb-8 pb-8 border-b border-border">
+          {post.price && <span className="text-xl md:text-2xl font-bold text-foreground">${post.price}</span>}
+          {post.author && <span className="font-medium text-foreground">{post.author}</span>}
           {post.date && (
             <time>
               {new Date(post.date).toLocaleDateString("en-US", {
@@ -67,8 +62,15 @@ export default async function PostPage({ params }: any) {
         </div>
 
         {post.content && (
-          <div className="prose md:prose-lg mt-8 max-w-none">
+          <div className="prose prose-lg max-w-none">
             <Markdown content={post.content} />
+          </div>
+        )}
+
+        {post.description && (
+          <div className="mt-12 border-t border-border pt-0x.5.5 border-none border-none">
+            <h2 className="text-xl md:text-2xl font-bold mb-4">Description</h2>
+            <p className="text-base md:text-lg text-muted-foreground leading-relaxed">{post.description}</p>
           </div>
         )}
       </article>

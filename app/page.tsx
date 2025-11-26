@@ -25,7 +25,7 @@ export default async function Page() {
         ) : (
           <div className="space-y-6 md:space-y-8">
             {allPosts.map((post) => (
-              <article key={post.slug} className="border-b border-border pb-6 md:pb-8">
+              <article key={post.slug} className="border-b pb-6 md:pb-8 border-black">
                 <Link href={`/posts/${post.slug}`} className="group">
                   {post.image && (
                     <div className="relative w-full h-[100px] mb-4 overflow-hidden">
@@ -54,14 +54,16 @@ export default async function Page() {
 
       {/* Right side - Image (hidden on mobile) */}
       <aside className="hidden md:block md:w-1/2 relative">
-        <div className="relative w-full h-full">
-          <Image
-            src="/images/7692.png"
-            alt="Abstract design with geometric patterns"
-            fill
-            className="object-cover bg-white"
-            priority
-          />
+        <div className="relative w-full h-full flex items-center justify-center">
+          <div className="relative w-[85%] h-[85%]">
+            <Image
+              src="/images/7693.png"
+              alt="Abstract design with geometric patterns"
+              fill
+              className="object-contain bg-white rotate-45"
+              priority
+            />
+          </div>
         </div>
       </aside>
     </div>

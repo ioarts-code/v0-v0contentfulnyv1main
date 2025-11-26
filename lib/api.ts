@@ -10,6 +10,7 @@ const POST_GRAPHQL_FIELDS = `
   }
   price
   author
+  description
 `
 
 async function fetchGraphQL(query: string, preview = false): Promise<any> {

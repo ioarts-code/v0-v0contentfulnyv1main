@@ -3,7 +3,7 @@ import "./globals.css"
 
 import { Header } from "@/components/header"
 
-import { Geist, Geist_Mono, Sedgwick_Ave_Display, Geist as V0_Font_Geist, Geist_Mono as V0_Font_Geist_Mono, Source_Serif_4 as V0_Font_Source_Serif_4 } from 'next/font/google'
+import { Geist, Geist_Mono, Audiowide, Source_Serif_4, Geist as V0_Font_Geist, Geist_Mono as V0_Font_Geist_Mono, Source_Serif_4 as V0_Font_Source_Serif_4 } from 'next/font/google'
 
 // Initialize fonts
 const _geist = V0_Font_Geist({ subsets: ['latin'], weight: ["100","200","300","400","500","600","700","800","900"] })
@@ -20,10 +20,15 @@ const geistMono = Geist_Mono({
   variable: "--font-mono",
 })
 
-const sedgwickAveDisplay = Sedgwick_Ave_Display({
+const audiowide = Audiowide({
   weight: "400",
   subsets: ["latin"],
   variable: "--font-title",
+})
+
+const sourceSerif4 = Source_Serif_4({
+  subsets: ["latin"],
+  weight: ["200", "300", "400", "500", "600", "700", "800", "900"],
 })
 
 export const metadata = {
@@ -53,7 +58,7 @@ export default function RootLayout({
         <link rel="stylesheet" href="https://use.typekit.net/rlu5ntk.css" />
       </head>
       <body
-        className={`${geist.variable} ${geistMono.variable} ${sedgwickAveDisplay.variable} font-sans flex flex-col min-h-screen`}
+        className={`${geist.variable} ${geistMono.variable} ${audiowide.variable} ${sourceSerif4.variable} font-sans flex flex-col min-h-screen`}
       >
         <Header />
         <main className="flex-1">{children}</main>

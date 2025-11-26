@@ -1,10 +1,32 @@
 import Link from "next/link"
-
 export function Header() {
   return (
-    <header className="h-[200px] md:h-[361px] relative w-full bg-neutral-300">
-      {/* Navigation Menu */}
-      <nav className="absolute left-4 md:left-[108px] top-4 md:top-[20px] flex gap-4 md:gap-8 text-sm md:text-base">
+    <header className="h-[200px] md:h-[300px] relative w-full bg-white">
+      {/* Logo/Title */}
+      <h1 className="absolute font-title leading-normal left-4 md:left-[108px] md:text-[128px] text-foreground top-12 md:top-[50px] whitespace-nowrap text-3xl">
+        ioarts
+      </h1>
+
+      {/* Decorative line 0 - above the title line */}
+      <div className="hidden md:block absolute h-0 left-[108px] top-[120px] w-[800px]">
+        <div className="absolute bottom-0 left-0 right-0 top-[-1px]">
+          <svg className="block w-full h-full mt-2" fill="none" preserveAspectRatio="none" viewBox="0 0 800 1">
+            <line stroke="currentColor" className="text-foreground" x2="800" y1="0.5" y2="0.5" />
+          </svg>
+        </div>
+      </div>
+
+      {/* Decorative line 1 - shortened to 800px to fit navigation */}
+      <div className="hidden md:block absolute h-0 left-[108px] top-[180px] w-[800px]">
+        <div className="absolute bottom-0 left-0 right-0 top-[-1px]">
+          <svg className="block w-full h-full mt-2" fill="none" preserveAspectRatio="none" viewBox="0 0 800 1">
+            <line stroke="currentColor" className="text-foreground" x2="800" y1="0.5" y2="0.5" />
+          </svg>
+        </div>
+      </div>
+
+      {/* Navigation Menu - moved after the line at x: 920px */}
+      <nav className="absolute left-4 md:left-[920px] top-4 md:top-[174px] flex gap-4 md:gap-8 text-sm md:text-lg font-title items-center ml-11 mb-0">
         <Link href="/" className="text-foreground hover:opacity-70 transition-opacity">
           home
         </Link>
@@ -13,22 +35,8 @@ export function Header() {
         </Link>
       </nav>
 
-      {/* Logo/Title */}
-      <h1 className="absolute font-title leading-normal left-4 md:left-[108px] text-5xl md:text-[128px] text-foreground top-12 md:top-[66px] whitespace-nowrap">
-        ioarts
-      </h1>
-
-      {/* Decorative line 1 */}
-      <div className="hidden md:block absolute h-0 left-[108px] top-[221px] w-[1072px]">
-        <div className="absolute bottom-0 left-0 right-0 top-[-1px]">
-          <svg className="block w-full h-full" fill="none" preserveAspectRatio="none" viewBox="0 0 1072 1">
-            <line stroke="currentColor" className="text-foreground" x2="1072" y1="0.5" y2="0.5" />
-          </svg>
-        </div>
-      </div>
-
       {/* Decorative line 2 */}
-      <div className="hidden md:block absolute left-[108px] top-[280px] w-[1558px] h-0">
+      <div className="hidden md:block absolute left-[108px] top-[240px] w-[1558px] h-0">
         <div className="absolute bottom-0 left-0 right-0 top-[-1px]">
           <svg className="block w-full h-full" fill="none" preserveAspectRatio="none" viewBox="0 0 1558 1">
             <line stroke="currentColor" className="text-foreground" x2="1558" y1="0.5" y2="0.5" />
