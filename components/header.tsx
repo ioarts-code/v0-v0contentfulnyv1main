@@ -1,7 +1,7 @@
 import Link from "next/link"
 export function Header() {
   return (
-    <header className="h-[200px] md:h-[300px] relative w-full bg-white">
+    <header className="h-[200px] md:h-[300px] relative w-full bg-zinc-100">
       {/* Logo/Title */}
       <h1 className="absolute font-title leading-normal left-4 md:left-[108px] md:text-[128px] text-foreground top-12 md:top-[50px] whitespace-nowrap text-3xl">
         ioarts
@@ -30,7 +30,7 @@ export function Header() {
         <Link href="/" className="text-foreground hover:opacity-70 transition-opacity">
           home
         </Link>
-        <Link href="/products" className="text-foreground hover:opacity-70 transition-opacity">
+        <Link href="/" className="text-foreground hover:opacity-70 transition-opacity">
           make
         </Link>
       </nav>

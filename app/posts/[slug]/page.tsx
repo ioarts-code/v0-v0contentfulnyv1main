@@ -45,7 +45,7 @@ export default async function PostPage({ params }: any) {
           </div>
         )}
 
-        <h1 className="text-3xl md:text-5xl font-bold mb-4">{post.title}</h1>
+        <h1 className="text-3xl md:text-5xl font-title mb-4">{post.title}</h1>
 
         <div className="flex flex-wrap items-center gap-3 text-sm md:text-base text-muted-foreground mb-8 pb-8 border-b border-border">
           {post.price && <span className="text-xl md:text-2xl font-bold text-foreground">${post.price}</span>}
