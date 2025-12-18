@@ -68,9 +68,25 @@ export default async function PostPage({ params }: any) {
         )}
 
         {post.description && (
-          <div className="mt-12 border-t border-border pt-0x.5.5 border-none border-none">
+          <div className="mt-12 border-t border-border pt-8 border-none">
             <h2 className="text-xl md:text-2xl font-bold mb-4">Description</h2>
             <p className="text-base md:text-lg text-muted-foreground leading-relaxed">{post.description}</p>
+
+            <a
+              href="https://www.deviantart.com/ioartseu/gallery/all"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-3 mt-6 px-6 py-3 bg-foreground text-background rounded-lg hover:opacity-90 transition-all duration-300 group"
+            >
+              <svg
+                className="w-8 h-8 group-hover:scale-110 group-hover:rotate-12 transition-transform duration-300"
+                viewBox="0 0 256 256"
+                fill="currentColor"
+              >
+                <path d="M208,0H94.4L69.6,27.2L60,32H0v79.2h45.6L35.2,126.4V256h113.6l24.8-27.2l9.6-4.8h72.8v-79.2h-45.6l10.4-15.2V0H208z M184,224h-73.6L80,207.2V150.4l19.2-16h72V224z" />
+              </svg>
+              <span className="font-title text-lg">View on DeviantArt</span>
+            </a>
           </div>
         )}
       </article>
