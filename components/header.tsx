@@ -1,10 +1,8 @@
 import Link from "next/link"
 export function Header() {
   return (
-    <header className="h-[200px] md:h-[300px] relative w-full overflow-hidden bg-gradient-to-br from-lime-200 via-orange-200 to-lime-100">
-      {/* Background gradient overlay for depth */}
-      <div className="absolute inset-0 bg-gradient-to-tr from-orange-300/40 via-transparent to-lime-300/40"></div>
-      <div className="absolute inset-0 bg-gradient-to-bl from-lime-400/20 via-orange-300/20 to-transparent border-solid border-black border-8 border-l-0 border-r-0 border-t-0 bg-white border-b"></div>
+    <header className="h-[200px] md:h-[300px] relative w-full overflow-hidden border-black border-b">
+
 
       <div className="absolute top-4 right-4 md:top-6 md:right-8 flex gap-3 md:gap-4 z-10">
         <Link

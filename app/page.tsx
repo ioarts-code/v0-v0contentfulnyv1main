@@ -56,7 +56,7 @@ export default async function Page() {
 
       {/* Right side - Image (hidden on mobile) */}
       <aside className="hidden md:block md:w-1/2 relative">
-        <h2 className="absolute top-8 left-1/2 -translate-x-1/2 font-title text-5xl md:text-6xl text-foreground z-10 text-right">
+        <h2 className="absolute top-8 left-1/2 -translate-x-1/2 font-title text-5xl md:text-6xl text-black z-10 text-right">
           Custom Gear
         </h2>
         <div className="relative w-full h-full flex items-center justify-center">
