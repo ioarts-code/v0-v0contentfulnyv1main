@@ -4,7 +4,7 @@ export function Header() {
     <header className="h-[200px] md:h-[300px] relative w-full overflow-hidden bg-gradient-to-br from-lime-200 via-pink-200 to-lime-100">
       {/* Background gradient overlay for depth */}
       <div className="absolute inset-0 bg-gradient-to-tr from-pink-300/40 via-transparent to-lime-300/40"></div>
-      <div className="absolute inset-0 bg-gradient-to-bl from-lime-400/20 via-pink-300/20 to-transparent"></div>
+      <div className="absolute inset-0 bg-gradient-to-bl from-lime-400/20 via-pink-300/20 to-transparent border-solid border-black border-8"></div>
 
       {/* Logo/Title */}
       <h1 className="absolute font-title leading-normal left-4 md:left-[108px] md:text-[128px] text-foreground top-12 md:top-[50px] whitespace-nowrap text-3xl z-10">
