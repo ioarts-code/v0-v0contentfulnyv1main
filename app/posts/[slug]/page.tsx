@@ -1,6 +1,5 @@
 import Link from "next/link"
 import { draftMode } from "next/headers"
-import { Markdown } from "@/lib/markdown"
 import { getAllPosts, getPostAndMorePosts } from "@/lib/api"
 
 export async function generateStaticParams() {
@@ -29,8 +28,11 @@ export default async function PostPage({ params }: any) {
   }
 
   return (
-    <div className="container mx-auto px-4 md:px-8 py-8 md:py-12 max-w-4xl">
-      <Link href="/" className="inline-block mb-8 text-foreground hover:opacity-70 transition-opacity">
+    <div className="container mx-auto px-4 md:px-8 py-8 md:py-12 max-w-4xl md:pb-28">
+      <Link
+        href="/"
+        className="inline-block mb-8 text-foreground hover:opacity-70 transition-opacity font-medium text-xl"
+      >
         ← Back to all posts
       </Link>
 
@@ -45,13 +47,13 @@ export default async function PostPage({ params }: any) {
           </div>
         )}
 
-        <h1 className="text-3xl md:text-5xl font-title mb-4">{post.title}</h1>
+        <h1 className="text-3xl md:text-5xl font-title mb-4 text-black">{post.title}</h1>
 
-        <div className="flex flex-wrap items-center gap-3 text-sm md:text-base text-muted-foreground mb-8 pb-8 border-b border-border">
+        <div className="flex flex-wrap items-center gap-3 text-sm md:text-base text-muted-foreground border-b border-border mb-8 pb-8">
           {post.price && <span className="text-xl md:text-2xl font-bold text-foreground">${post.price}</span>}
           {post.author && <span className="font-medium text-foreground">{post.author}</span>}
           {post.date && (
-            <time>
+            <time className="text-muted-foreground" dateTime={post.date}>
               {new Date(post.date).toLocaleDateString("en-US", {
                 year: "numeric",
                 month: "long",
@@ -61,15 +63,9 @@ export default async function PostPage({ params }: any) {
           )}
         </div>
 
-        {post.content && (
-          <div className="prose prose-lg max-w-none">
-            <Markdown content={post.content} />
-          </div>
-        )}
-
         {post.description && (
-          <div className="mt-12 border-t border-border pt-8 border-none">
-            <h2 className="text-xl md:text-2xl font-bold mb-4">Description</h2>
+          <div className="border-t border-border border-none border-none mt-0 pt-0">
+            <h2 className="text-xl md:text-2xl font-bold mb-4 text-black">Description</h2>
             <p className="text-base md:text-lg text-muted-foreground leading-relaxed">{post.description}</p>
 
             <a

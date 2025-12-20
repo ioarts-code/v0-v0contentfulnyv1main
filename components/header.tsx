@@ -1,7 +1,7 @@
 import Link from "next/link"
 export function Header() {
   return (
-    <header className="h-[200px] md:h-[300px] relative w-full overflow-hidden border-black border-b">
+    <header className="h-[200px] md:h-[300px] relative w-full overflow-hidden border-b border-neutral-300 bg-neutral-800">
 
 
       <div className="absolute top-4 right-4 md:top-6 md:right-8 flex gap-3 md:gap-4 z-10">
@@ -9,7 +9,7 @@ export function Header() {
           href="https://www.deviantart.com/ioartseu/gallery/all"
           target="_blank"
           rel="noopener noreferrer"
-          className="w-8 h-8 md:w-10 md:h-10 flex items-center justify-center bg-foreground/10 hover:bg-foreground/20 rounded-full transition-all hover:scale-110"
+          className="w-8 h-8 md:w-10 md:h-10 flex items-center justify-center hover:bg-foreground/20 rounded-full transition-all hover:scale-110 bg-neutral-300"
           aria-label="DeviantArt"
         >
           <svg className="w-5 h-5 md:w-6 md:h-6" viewBox="0 0 24 24" fill="currentColor">
@@ -21,7 +21,7 @@ export function Header() {
           href="https://instagram.com/ioarts"
           target="_blank"
           rel="noopener noreferrer"
-          className="w-8 h-8 md:w-10 md:h-10 flex items-center justify-center bg-foreground/10 hover:bg-foreground/20 rounded-full transition-all hover:scale-110"
+          className="w-8 h-8 md:w-10 md:h-10 flex items-center justify-center hover:bg-foreground/20 rounded-full transition-all hover:scale-110 bg-neutral-300"
           aria-label="Instagram"
         >
           <svg
@@ -43,7 +43,7 @@ export function Header() {
           href="https://twitter.com/ioarts"
           target="_blank"
           rel="noopener noreferrer"
-          className="w-8 h-8 md:w-10 md:h-10 flex items-center justify-center bg-foreground/10 hover:bg-foreground/20 rounded-full transition-all hover:scale-110"
+          className="w-8 h-8 md:w-10 md:h-10 flex items-center justify-center hover:bg-foreground/20 rounded-full transition-all hover:scale-110 bg-neutral-300"
           aria-label="Twitter/X"
         >
           <svg className="w-5 h-5 md:w-6 md:h-6" viewBox="0 0 24 24" fill="currentColor">
@@ -53,24 +53,24 @@ export function Header() {
       </div>
 
       {/* Logo/Title */}
-      <h1 className="absolute font-title leading-normal left-4 md:left-[108px] md:text-[128px] text-foreground top-12 md:top-[50px] whitespace-nowrap text-3xl z-20">
+      <h1 className="absolute font-title leading-normal left-4 md:left-[108px] md:text-[128px] top-12 md:top-[50px] whitespace-nowrap text-3xl z-20 text-neutral-300">
         ioarts
       </h1>
 
       {/* Decorative line 0 - above the title line */}
       <div className="hidden md:block absolute h-0 left-[108px] top-[120px] w-[800px] z-10">
-        <div className="absolute bottom-0 left-0 right-0 top-[-1px]">
+        <div className="absolute bottom-0 left-0 right-0 top-[-1px] text-neutral-300">
           <svg className="block w-full h-full mt-2" fill="none" preserveAspectRatio="none" viewBox="0 0 800 1">
-            <line stroke="currentColor" className="text-foreground" x2="800" y1="0.5" y2="0.5" />
+            <line stroke="currentColor" className="text-neutral-300" x2="800" y1="0.5" y2="0.5" />
           </svg>
         </div>
       </div>
 
       {/* Decorative line 1 - shortened to 800px to fit navigation */}
       <div className="hidden md:block absolute h-0 left-[108px] top-[180px] w-[800px] z-10">
-        <div className="absolute bottom-0 left-0 right-0 top-[-1px]">
+        <div className="absolute bottom-0 left-0 right-0 top-[-1px] text-neutral-300">
           <svg className="block w-full h-full mt-2" fill="none" preserveAspectRatio="none" viewBox="0 0 800 1">
-            <line stroke="currentColor" className="text-foreground" x2="800" y1="0.5" y2="0.5" />
+            <line stroke="currentColor" className="text-neutral-300" x2="800" y1="0.5" y2="0.5" />
           </svg>
         </div>
       </div>
@@ -79,11 +79,11 @@ export function Header() {
       <nav className="absolute left-4 md:left-[920px] top-4 md:top-[174px] flex gap-4 md:gap-8 text-sm md:text-lg font-title items-center ml-11 mb-0 z-10">
         <Link
           href="https://www.deviantart.com/ioartseu/gallery/all"
-          className="text-foreground hover:opacity-70 transition-opacity font-black"
+          className="hover:opacity-70 transition-opacity font-black text-neutral-300"
         >
           home
         </Link>
-        <Link href="/" className="text-foreground hover:opacity-70 transition-opacity font-black">
+        <Link href="/" className="hover:opacity-70 transition-opacity font-black text-neutral-300">
           make
         </Link>
       </nav>
@@ -92,7 +92,7 @@ export function Header() {
       <div className="hidden md:block absolute left-[108px] top-[240px] w-[1558px] h-0 z-10">
         <div className="absolute bottom-0 left-0 right-0 top-[-1px]">
           <svg className="block w-full h-full" fill="none" preserveAspectRatio="none" viewBox="0 0 1558 1">
-            <line stroke="currentColor" className="text-foreground" x2="1558" y1="0.5" y2="0.5" />
+            <line stroke="currentColor" className="text-neutral-300" x2="1558" y1="0.5" y2="0.5" />
           </svg>
         </div>
       </div>
