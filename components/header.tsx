@@ -2,14 +2,12 @@ import Link from "next/link"
 export function Header() {
   return (
     <header className="h-[200px] md:h-[300px] relative w-full overflow-hidden border-b border-neutral-300 bg-neutral-800">
-
-
       <div className="absolute top-4 right-4 md:top-6 md:right-8 flex gap-3 md:gap-4 z-10">
         <Link
           href="https://www.deviantart.com/ioartseu/gallery/all"
           target="_blank"
           rel="noopener noreferrer"
-          className="w-8 h-8 md:w-10 md:h-10 flex items-center justify-center hover:bg-foreground/20 rounded-full transition-all hover:scale-110 bg-neutral-300"
+          className="w-8 h-8 md:w-10 md:h-10 flex items-center justify-center hover:bg-gradient-to-br hover:from-pink-400 hover:to-cyan-400 rounded-full transition-all hover:scale-110 bg-neutral-300"
           aria-label="DeviantArt"
         >
           <svg className="w-5 h-5 md:w-6 md:h-6" viewBox="0 0 24 24" fill="currentColor">
@@ -21,7 +19,7 @@ export function Header() {
           href="https://instagram.com/ioarts"
           target="_blank"
           rel="noopener noreferrer"
-          className="w-8 h-8 md:w-10 md:h-10 flex items-center justify-center hover:bg-foreground/20 rounded-full transition-all hover:scale-110 bg-neutral-300"
+          className="w-8 h-8 md:w-10 md:h-10 flex items-center justify-center hover:bg-gradient-to-br hover:from-pink-400 hover:to-cyan-400 rounded-full transition-all hover:scale-110 bg-neutral-300"
           aria-label="Instagram"
         >
           <svg
@@ -43,7 +41,7 @@ export function Header() {
           href="https://twitter.com/ioarts"
           target="_blank"
           rel="noopener noreferrer"
-          className="w-8 h-8 md:w-10 md:h-10 flex items-center justify-center hover:bg-foreground/20 rounded-full transition-all hover:scale-110 bg-neutral-300"
+          className="w-8 h-8 md:w-10 md:h-10 flex items-center justify-center hover:bg-gradient-to-br hover:from-pink-400 hover:to-cyan-400 rounded-full transition-all hover:scale-110 bg-neutral-300"
           aria-label="Twitter/X"
         >
           <svg className="w-5 h-5 md:w-6 md:h-6" viewBox="0 0 24 24" fill="currentColor">
