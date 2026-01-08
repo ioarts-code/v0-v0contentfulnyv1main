@@ -2,6 +2,7 @@ import type React from "react"
 import "./globals.css"
 
 import { Header } from "@/components/header"
+import { Footer } from "@/components/footer"
 
 import { Geist, Geist_Mono, Audiowide, Source_Serif_4, Geist as V0_Font_Geist, Geist_Mono as V0_Font_Geist_Mono, Source_Serif_4 as V0_Font_Source_Serif_4 } from 'next/font/google'
 
@@ -13,11 +14,13 @@ const _sourceSerif_4 = V0_Font_Source_Serif_4({ subsets: ['latin'], weight: ["20
 const geist = Geist({
   subsets: ["latin"],
   variable: "--font-sans",
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
 })
 
 const geistMono = Geist_Mono({
   subsets: ["latin"],
   variable: "--font-mono",
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
 })
 
 const audiowide = Audiowide({
@@ -29,22 +32,13 @@ const audiowide = Audiowide({
 const sourceSerif4 = Source_Serif_4({
   subsets: ["latin"],
   weight: ["200", "300", "400", "500", "600", "700", "800", "900"],
+  variable: "--font-serif",
 })
 
 export const metadata = {
   title: "Blog",
   description: "A blog built with Next.js and Contentful.",
   generator: "v0.app",
-}
-
-function Footer() {
-  return (
-    <footer className="border-t border-border mt-auto bg-white">
-      <div className="container mx-auto px-5 py-8">
-        <p className="text-sm text-muted-foreground text-center">Built with Next.js and Contentful</p>
-      </div>
-    </footer>
-  )
 }
 
 export default function RootLayout({

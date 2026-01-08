@@ -49,20 +49,6 @@ export default async function PostPage({ params }: any) {
 
         <h1 className="text-3xl md:text-5xl font-title mb-4 text-black">{post.title}</h1>
 
-        <div className="flex flex-wrap items-center gap-3 text-sm md:text-base text-muted-foreground border-b border-border mb-8 pb-8">
-          {post.price && <span className="text-xl md:text-2xl font-bold text-foreground">${post.price}</span>}
-          {post.author && <span className="font-medium text-foreground">{post.author}</span>}
-          {post.date && (
-            <time className="text-muted-foreground" dateTime={post.date}>
-              {new Date(post.date).toLocaleDateString("en-US", {
-                year: "numeric",
-                month: "long",
-                day: "numeric",
-              })}
-            </time>
-          )}
-        </div>
-
         {post.description && (
           <div className="border-t border-border border-none border-none mt-0 pt-0">
             <h2 className="text-xl md:text-2xl font-bold mb-4 text-black">Description</h2>
@@ -72,16 +58,16 @@ export default async function PostPage({ params }: any) {
               href="https://www.deviantart.com/ioartseu/gallery/all"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-3 mt-6 px-6 py-3 bg-foreground text-background rounded-lg hover:opacity-90 transition-all duration-300 group"
+              className="inline-flex items-center gap-3 mt-6 px-8 py-4 bg-gradient-to-r from-pink-500 to-cyan-400 text-white rounded-full font-title text-lg hover:from-pink-600 hover:to-cyan-500 hover:shadow-lg hover:scale-105 transition-all duration-300 group"
             >
               <svg
-                className="w-8 h-8 group-hover:scale-110 group-hover:rotate-12 transition-transform duration-300"
-                viewBox="0 0 256 256"
+                className="w-6 h-6 animate-pulse group-hover:animate-none group-hover:scale-110 transition-transform duration-300"
+                viewBox="0 0 24 24"
                 fill="currentColor"
               >
-                <path d="M208,0H94.4L69.6,27.2L60,32H0v79.2h45.6L35.2,126.4V256h113.6l24.8-27.2l9.6-4.8h72.8v-79.2h-45.6l10.4-15.2V0H208z M184,224h-73.6L80,207.2V150.4l19.2-16h72V224z" />
+                <path d="M19.207 4.794l.23-.43V0H15.07l-.436.44-2.058 3.836-.627.354H4.58v5.378h4.156l-5.02 9.378-.2.428V24h4.364l.436-.44 2.058-3.836.627-.354h7.37v-5.378h-4.156l5.02-9.378z" />
               </svg>
-              <span className="font-title text-lg">View on DeviantArt</span>
+              <span>View on DeviantArt</span>
             </a>
           </div>
         )}
