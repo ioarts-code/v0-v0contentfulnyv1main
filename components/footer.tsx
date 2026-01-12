@@ -2,7 +2,7 @@ import Link from "next/link"
 
 export function Footer() {
   return (
-    <footer className="h-[200px] md:h-[300px] relative w-full overflow-hidden border-t border-neutral-300 bg-black">
+    <footer className="h-[200px] md:h-[300px] relative w-full overflow-hidden border-t border-neutral-300 bg-slate-200">
       {/* Decorative line 1 */}
       <div className="hidden md:block absolute left-[108px] top-[60px] w-[1558px] h-0 z-10">
         <div className="absolute bottom-0 left-0 right-0 top-[-1px]">
@@ -55,8 +55,8 @@ export function Footer() {
           className="w-8 h-8 md:w-10 md:h-10 flex items-center justify-center hover:bg-gradient-to-br hover:from-pink-400 hover:to-cyan-400 rounded-full transition-all hover:scale-110 bg-neutral-700"
           aria-label="DeviantArt"
         >
-          <svg className="w-5 h-5 md:w-6 md:h-6 text-neutral-100" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M19.207 4.794l.23-.43V0H15.07l-.436.44-2.058 3.925-.646.436H7.618v5.993h2.742l.436.436-3.262 6.224-.24.435V24h4.364l.44-.44 2.058-3.925.646-.436h4.312v-5.993h-2.742l-.436-.436 3.262-6.224z" />
+          <svg className="w-5 h-5 md:w-6 md:h-6 text-white" viewBox="0 0 24 24" fill="currentColor">
+            <path className="text-white" d="M19.207 4.794l.23-.43V0H15.07l-.436.44-2.058 3.925-.646.436H7.618v5.993h2.742l.436.436-3.262 6.224-.24.435V24h4.364l.44-.44 2.058-3.925.646-.436h4.312v-5.993h-2.742l-.436-.436 3.262-6.224z" />
           </svg>
         </Link>
 
@@ -68,7 +68,7 @@ export function Footer() {
           aria-label="Instagram"
         >
           <svg
-            className="w-5 h-5 md:w-6 md:h-6 text-neutral-100"
+            className="w-5 h-5 md:w-6 md:h-6 text-white"
             viewBox="0 0 24 24"
             fill="none"
             stroke="currentColor"
@@ -77,7 +77,7 @@ export function Footer() {
             strokeLinejoin="round"
           >
             <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+            <path className="text-white" d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
             <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
           </svg>
         </Link>
@@ -90,7 +90,7 @@ export function Footer() {
           aria-label="Twitter/X"
         >
           <svg className="w-5 h-5 md:w-6 md:h-6 text-neutral-100" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+            <path className="text-white" d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
           </svg>
         </Link>
       </div>

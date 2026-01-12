@@ -47,11 +47,11 @@ export default async function PostPage({ params }: any) {
           </div>
         )}
 
-        <h1 className="text-3xl md:text-5xl font-title mb-4 text-black">{post.title}</h1>
+        <h1 className="text-3xl md:text-5xl font-title mb-4 text-neutral-700">{post.title}</h1>
 
         {post.description && (
           <div className="border-t border-border border-none border-none mt-0 pt-0">
-            <h2 className="text-xl md:text-2xl font-bold mb-4 text-black">Description</h2>
+            <h2 className="text-xl md:text-2xl font-bold mb-4 text-neutral-700">Description</h2>
             <p className="text-base md:text-lg text-muted-foreground leading-relaxed">{post.description}</p>
 
             <a

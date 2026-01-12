@@ -10,7 +10,7 @@ export default async function Page() {
   return (
     <div className="flex h-screen overflow-hidden">
       {/* Left side - Scrollable posts */}
-      <main className="w-full md:w-1/2 overflow-y-auto px-4 md:px-8 py-8 md:py-12 bg-white">
+      <main className="w-full md:w-1/2 overflow-y-auto px-4 md:px-8 py-8 md:py-12 bg-slate-200">
         <h3 className="text-lg md:text-xl font-title mb-6 md:mb-8 text-foreground underline">Browse</h3>
 
         {allPosts.length === 0 ? (
@@ -27,7 +27,7 @@ export default async function Page() {
         ) : (
           <div className="space-y-6 md:space-y-8">
             {allPosts.map((post) => (
-              <article key={post.slug} className="border-b pb-6 md:pb-8 border-black">
+              <article key={post.slug} className="border-b pb-6 md:pb-8 border-neutral-700">
                 <Link href={`/posts/${post.slug}`} className="group">
                   {post.image && (
                     <div className="relative w-full h-[100px] mb-4 overflow-hidden">
@@ -37,15 +37,7 @@ export default async function Page() {
                   <h2 className="text-2xl md:text-3xl font-title mb-2 text-foreground group-hover:text-primary transition-colors">
                     {post.title}
                   </h2>
-                  {post.date && (
-                    <time className="text-sm text-muted-foreground">
-                      {new Date(post.date).toLocaleDateString("en-US", {
-                        year: "numeric",
-                        month: "long",
-                        day: "numeric",
-                      })}
-                    </time>
-                  )}
+
                   {post.excerpt && <p className="mt-2 text-muted-foreground leading-relaxed">{post.excerpt}</p>}
                 </Link>
               </article>
@@ -59,13 +51,13 @@ export default async function Page() {
         <h2 className="absolute top-8 left-1/2 -translate-x-1/2 font-title text-5xl md:text-6xl text-black z-10 text-right">
           Custom Gear
         </h2>
-        <div className="relative w-full h-full flex items-center justify-center">
+        <div className="relative w-full h-full flex items-center justify-center bg-slate-200">
           <div className="relative w-[85%] h-[85%]">
             <Image
               src="/images/7691.png"
               alt="Abstract design with geometric patterns"
               fill
-              className="object-contain bg-white rotate-0 mb-0"
+              className="object-contain rotate-0 mb-0 bg-slate-200"
               priority
             />
           </div>

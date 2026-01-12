@@ -1,7 +1,7 @@
 import Link from "next/link"
 export function Header() {
   return (
-    <header className="h-[200px] md:h-[300px] relative w-full overflow-hidden border-b border-neutral-300 bg-slate-200">
+    <header className="h-[200px] md:h-[300px] relative w-full overflow-hidden border-b bg-slate-200 border-neutral-700">
       <div className="absolute top-4 right-4 md:top-6 md:right-8 flex gap-3 md:gap-4 z-10">
         <Link
           href="https://www.deviantart.com/ioartseu/gallery/all"
@@ -51,15 +51,15 @@ export function Header() {
       </div>
 
       {/* Logo/Title */}
-      <h1 className="absolute font-title leading-normal left-4 md:left-[108px] md:text-[128px] top-12 md:top-[50px] whitespace-nowrap z-20 text-neutral-300 text-7xl">
+      <h1 className="absolute font-title leading-normal left-4 md:left-[108px] md:text-[128px] top-12 md:top-[50px] whitespace-nowrap z-20 text-7xl text-neutral-700">
         ioarts
       </h1>
 
       {/* Decorative line 0 - above the title line */}
       <div className="hidden md:block absolute h-0 left-[108px] top-[120px] w-[800px] z-10">
         <div className="absolute bottom-0 left-0 right-0 top-[-1px] text-neutral-300">
-          <svg className="block w-full h-full mt-2" fill="none" preserveAspectRatio="none" viewBox="0 0 800 1">
-            <line stroke="currentColor" className="text-neutral-300" x2="800" y1="0.5" y2="0.5" />
+          <svg className="block w-full h-full mt-2 text-neutral-700" fill="none" preserveAspectRatio="none" viewBox="0 0 800 1">
+            <line stroke="currentColor" className="text-black" x2="800" y1="0.5" y2="0.5" />
           </svg>
         </div>
       </div>
@@ -68,7 +68,7 @@ export function Header() {
       <div className="hidden md:block absolute h-0 left-[108px] top-[180px] w-[800px] z-10">
         <div className="absolute bottom-0 left-0 right-0 top-[-1px] text-neutral-300">
           <svg className="block w-full h-full mt-2" fill="none" preserveAspectRatio="none" viewBox="0 0 800 1">
-            <line stroke="currentColor" className="text-neutral-300" x2="800" y1="0.5" y2="0.5" />
+            <line stroke="currentColor" className="text-black" x2="800" y1="0.5" y2="0.5" />
           </svg>
         </div>
       </div>
@@ -77,11 +77,11 @@ export function Header() {
       <nav className="absolute left-4 md:left-[920px] top-4 md:top-[174px] flex gap-4 md:gap-8 text-sm md:text-lg font-title items-center ml-11 mb-0 z-10">
         <Link
           href="https://www.deviantart.com/ioartseu/gallery/all"
-          className="hover:opacity-70 transition-opacity font-black text-neutral-300"
+          className="hover:opacity-70 transition-opacity font-black text-stone-700"
         >
           home
         </Link>
-        <Link href="/" className="hover:opacity-70 transition-opacity font-black text-neutral-300">
+        <Link href="/" className="hover:opacity-70 transition-opacity font-black text-neutral-700">
           make
         </Link>
       </nav>
@@ -90,7 +90,7 @@ export function Header() {
       <div className="hidden md:block absolute left-[108px] top-[240px] w-[1558px] h-0 z-10">
         <div className="absolute bottom-0 left-0 right-0 top-[-1px]">
           <svg className="block w-full h-full" fill="none" preserveAspectRatio="none" viewBox="0 0 1558 1">
-            <line stroke="currentColor" className="text-neutral-300" x2="1558" y1="0.5" y2="0.5" />
+            <line stroke="currentColor" className="text-black" x2="1558" y1="0.5" y2="0.5" />
           </svg>
         </div>
       </div>
