@@ -2,7 +2,7 @@ import Link from "next/link"
 
 export function Footer() {
   return (
-    <footer className="h-[200px] md:h-[300px] relative w-full overflow-hidden border-t border-neutral-300 bg-neutral-100">
+    <footer className="h-[200px] md:h-[300px] relative w-full overflow-hidden border-t border-neutral-300 bg-slate-200">
       {/* Decorative line 1 */}
       <div className="hidden md:block absolute left-[108px] top-[60px] w-[1558px] h-0 z-10">
         <div className="absolute bottom-0 left-0 right-0 top-[-1px]">

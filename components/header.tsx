@@ -1,7 +1,7 @@
 import Link from "next/link"
 export function Header() {
   return (
-    <header className="h-[200px] md:h-[300px] relative w-full overflow-hidden border-b border-neutral-300 bg-neutral-800">
+    <header className="h-[200px] md:h-[300px] relative w-full overflow-hidden border-b border-neutral-300 bg-slate-200">
       <div className="absolute top-4 right-4 md:top-6 md:right-8 flex gap-3 md:gap-4 z-10">
         <Link
           href="https://www.deviantart.com/ioartseu/gallery/all"
@@ -51,7 +51,7 @@ export function Header() {
       </div>
 
       {/* Logo/Title */}
-      <h1 className="absolute font-title leading-normal left-4 md:left-[108px] md:text-[128px] top-12 md:top-[50px] whitespace-nowrap text-3xl z-20 text-neutral-300">
+      <h1 className="absolute font-title leading-normal left-4 md:left-[108px] md:text-[128px] top-12 md:top-[50px] whitespace-nowrap z-20 text-neutral-300 text-7xl">
         ioarts
       </h1>
 
