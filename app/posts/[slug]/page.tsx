@@ -31,9 +31,7 @@ export default async function PostPage({ params }: any) {
     <div className="container mx-auto px-4 md:px-8 py-8 md:py-12 max-w-4xl md:pb-28">
       <Link
         href="/"
-        className="inline-block mb-8 text-foreground hover:opacity-70 transition-opacity font-medium text-xl"
-      >
-        ← Back to all posts
+        className="inline-block mb-8 hover:opacity-70 transition-opacity font-title text-xl text-neutral-70000ts
       </Link>
 
       <article>
@@ -58,7 +56,7 @@ export default async function PostPage({ params }: any) {
               href="https://www.deviantart.com/ioartseu/gallery/all"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-3 mt-6 px-8 py-4 bg-gradient-to-r from-pink-500 to-cyan-400 text-white rounded-full font-title text-lg hover:from-pink-600 hover:to-cyan-500 hover:shadow-lg hover:scale-105 transition-all duration-300 group"
+              className="inline-flex items-center gap-3 mt-6 px-8 py-4 text-white rounded-full font-title text-lg hover:bg-neutral-800 hover:shadow-lg hover:scale-105 transition-all duration-300 group bg-neutral-700"
             >
               <svg
                 className="w-6 h-6 animate-pulse group-hover:animate-none group-hover:scale-110 transition-transform duration-300"

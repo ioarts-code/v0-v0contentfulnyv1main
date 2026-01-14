@@ -36,9 +36,7 @@ export function Footer() {
 
       {/* Decorative line 3 */}
       <div className="hidden md:block absolute h-0 left-[108px] top-[180px] w-[800px] z-10">
-        <div className="absolute bottom-0 left-0 right-0 top-[-1px] text-neutral-700">
-          
-        </div>
+        <div className="absolute bottom-0 left-0 right-0 top-[-1px] text-neutral-700"></div>
       </div>
 
       {/* Copyright/Title */}
@@ -52,11 +50,15 @@ export function Footer() {
           href="https://www.deviantart.com/ioartseu/gallery/all"
           target="_blank"
           rel="noopener noreferrer"
-          className="w-8 h-8 md:w-10 md:h-10 flex items-center justify-center hover:bg-gradient-to-br hover:from-pink-400 hover:to-cyan-400 rounded-full transition-all hover:scale-110 bg-neutral-700"
+          className="group w-8 h-8 md:w-10 md:h-10 flex items-center justify-center hover:bg-slate-200 rounded-full transition-all hover:scale-110 bg-neutral-700"
           aria-label="DeviantArt"
         >
-          <svg className="w-5 h-5 md:w-6 md:h-6 text-white" viewBox="0 0 24 24" fill="currentColor">
-            <path className="text-white" d="M19.207 4.794l.23-.43V0H15.07l-.436.44-2.058 3.925-.646.436H7.618v5.993h2.742l.436.436-3.262 6.224-.24.435V24h4.364l.44-.44 2.058-3.925.646-.436h4.312v-5.993h-2.742l-.436-.436 3.262-6.224z" />
+          <svg
+            className="w-5 h-5 md:w-6 md:h-6 text-white group-hover:text-neutral-700 transition-colors"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+          >
+            <path d="M19.207 4.794l.23-.43V0H15.07l-.436.44-2.058 3.925-.646.436H7.618v5.993h2.742l.436.436-3.262 6.224-.24.435V24h4.364l.44-.44 2.058-3.925.646-.436h4.312v-5.993h-2.742l-.436-.436 3.262-6.224z" />
           </svg>
         </Link>
 
@@ -64,11 +66,11 @@ export function Footer() {
           href="https://instagram.com/ioarts"
           target="_blank"
           rel="noopener noreferrer"
-          className="w-8 h-8 md:w-10 md:h-10 flex items-center justify-center hover:bg-gradient-to-br hover:from-pink-400 hover:to-cyan-400 rounded-full transition-all hover:scale-110 bg-neutral-700"
+          className="group w-8 h-8 md:w-10 md:h-10 flex items-center justify-center hover:bg-slate-200 rounded-full transition-all hover:scale-110 bg-neutral-700"
           aria-label="Instagram"
         >
           <svg
-            className="w-5 h-5 md:w-6 md:h-6 text-white"
+            className="w-5 h-5 md:w-6 md:h-6 text-white group-hover:text-neutral-700 group-hover:stroke-neutral-700 transition-colors"
             viewBox="0 0 24 24"
             fill="none"
             stroke="currentColor"
@@ -77,7 +79,7 @@ export function Footer() {
             strokeLinejoin="round"
           >
             <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-            <path className="text-white" d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
             <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
           </svg>
         </Link>
@@ -86,11 +88,15 @@ export function Footer() {
           href="https://twitter.com/ioarts"
           target="_blank"
           rel="noopener noreferrer"
-          className="w-8 h-8 md:w-10 md:h-10 flex items-center justify-center hover:bg-gradient-to-br hover:from-pink-400 hover:to-cyan-400 rounded-full transition-all hover:scale-110 bg-neutral-700"
+          className="group w-8 h-8 md:w-10 md:h-10 flex items-center justify-center hover:bg-slate-200 rounded-full transition-all hover:scale-110 bg-neutral-700"
           aria-label="Twitter/X"
         >
-          <svg className="w-5 h-5 md:w-6 md:h-6 text-neutral-100" viewBox="0 0 24 24" fill="currentColor">
-            <path className="text-white" d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+          <svg
+            className="w-5 h-5 md:w-6 md:h-6 text-white group-hover:text-neutral-700 transition-colors"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+          >
+            <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
           </svg>
         </Link>
       </div>

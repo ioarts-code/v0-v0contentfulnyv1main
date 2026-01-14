@@ -7,7 +7,7 @@ export function Header() {
           href="https://www.deviantart.com/ioartseu/gallery/all"
           target="_blank"
           rel="noopener noreferrer"
-          className="w-8 h-8 md:w-10 md:h-10 flex items-center justify-center hover:bg-gradient-to-br hover:from-pink-400 hover:to-cyan-400 rounded-full transition-all hover:scale-110 bg-neutral-300"
+          className="w-8 h-8 md:w-10 md:h-10 flex items-center justify-center hover:bg-slate-200 rounded-full transition-all hover:scale-110 bg-neutral-700 text-white hover:text-neutral-700"
           aria-label="DeviantArt"
         >
           <svg className="w-5 h-5 md:w-6 md:h-6" viewBox="0 0 24 24" fill="currentColor">
@@ -19,7 +19,7 @@ export function Header() {
           href="https://instagram.com/ioarts"
           target="_blank"
           rel="noopener noreferrer"
-          className="w-8 h-8 md:w-10 md:h-10 flex items-center justify-center hover:bg-gradient-to-br hover:from-pink-400 hover:to-cyan-400 rounded-full transition-all hover:scale-110 bg-neutral-300"
+          className="w-8 h-8 md:w-10 md:h-10 flex items-center justify-center hover:bg-slate-200 rounded-full transition-all hover:scale-110 bg-neutral-700 text-white hover:text-neutral-700"
           aria-label="Instagram"
         >
           <svg
@@ -41,7 +41,7 @@ export function Header() {
           href="https://twitter.com/ioarts"
           target="_blank"
           rel="noopener noreferrer"
-          className="w-8 h-8 md:w-10 md:h-10 flex items-center justify-center hover:bg-gradient-to-br hover:from-pink-400 hover:to-cyan-400 rounded-full transition-all hover:scale-110 bg-neutral-300"
+          className="w-8 h-8 md:w-10 md:h-10 flex items-center justify-center hover:bg-slate-200 rounded-full transition-all hover:scale-110 bg-neutral-700 text-white hover:text-neutral-700"
           aria-label="Twitter/X"
         >
           <svg className="w-5 h-5 md:w-6 md:h-6" viewBox="0 0 24 24" fill="currentColor">
@@ -58,7 +58,12 @@ export function Header() {
       {/* Decorative line 0 - above the title line */}
       <div className="hidden md:block absolute h-0 left-[108px] top-[120px] w-[800px] z-10">
         <div className="absolute bottom-0 left-0 right-0 top-[-1px] text-neutral-300">
-          <svg className="block w-full h-full mt-2 text-neutral-700" fill="none" preserveAspectRatio="none" viewBox="0 0 800 1">
+          <svg
+            className="block w-full h-full mt-2 text-neutral-700"
+            fill="none"
+            preserveAspectRatio="none"
+            viewBox="0 0 800 1"
+          >
             <line stroke="currentColor" className="text-black" x2="800" y1="0.5" y2="0.5" />
           </svg>
         </div>
