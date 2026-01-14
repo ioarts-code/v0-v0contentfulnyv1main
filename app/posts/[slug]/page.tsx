@@ -45,18 +45,19 @@ export default async function PostPage({ params }: any) {
           </div>
         )}
 
-        <h1 className="text-3xl md:text-5xl font-title mb-4 text-neutral-700">{post.title}</h1>
+        <h1 className="text-3xl md:text-5xl font-title mb-4 text-neutral-700 py-0">{post.title}</h1>
 
         {post.description && (
-          <div className="border-t border-border border-none border-none mt-0 pt-0">
-            <h2 className="text-xl md:text-2xl font-bold mb-4 text-neutral-700">Description</h2>
-            <p className="text-base md:text-lg text-muted-foreground leading-relaxed">{post.description}</p>
+          <div className="bg-neutral-700 rounded-2xl pt-2">
+            <h2 className="text-xl md:text-2xl font-bold mb-4 text-white px-9 py-4 pb-0 mt-0">Description</h2>
+            <p className="text-base leading-relaxed text-white px-9 md:text-base">{post.description}</p>
 
-            <a
+
+                        <a
               href="https://www.deviantart.com/ioartseu/gallery/all"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-3 mt-6 px-8 py-4 text-white rounded-full font-title text-lg hover:bg-neutral-800 hover:shadow-lg hover:scale-105 transition-all duration-300 group bg-neutral-700"
+              className="inline-flex items-center gap-3 py-4 text-white rounded-full font-title text-lg hover:bg-neutral-800 hover:shadow-lg hover:scale-105 transition-all duration-300 group bg-neutral-700 px-8 ml-1.5 mt-2.5"
             >
               <svg
                 className="w-6 h-6 animate-pulse group-hover:animate-none group-hover:scale-110 transition-transform duration-300"
@@ -65,7 +66,22 @@ export default async function PostPage({ params }: any) {
               >
                 <path d="M19.207 4.794l.23-.43V0H15.07l-.436.44-2.058 3.836-.627.354H4.58v5.378h4.156l-5.02 9.378-.2.428V24h4.364l.436-.44 2.058-3.836.627-.354h7.37v-5.378h-4.156l5.02-9.378z" />
               </svg>
-              <span>View on DeviantArt</span>
+              <span>DeviantArt</span>
+            </a>
+                        <a
+              href="https://www.etsy.com/shop/ioartseu"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-3 px-8 py-4 text-white rounded-full font-title text-lg hover:bg-neutral-800 hover:shadow-lg hover:scale-105 transition-all duration-300 group bg-neutral-700 mt-0 mb-7 ml-0"
+            >
+              <svg
+                className="w-6 h-6 animate-pulse group-hover:animate-none group-hover:scale-110 transition-transform duration-300"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+              >
+                <path d="M19.207 4.794l.23-.43V0H15.07l-.436.44-2.058 3.836-.627.354H4.58v5.378h4.156l-5.02 9.378-.2.428V24h4.364l.436-.44 2.058-3.836.627-.354h7.37v-5.378h-4.156l5.02-9.378z" />
+              </svg>
+              <span>Browse on Etsy</span>
             </a>
           </div>
         )}
