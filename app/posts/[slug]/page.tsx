@@ -45,7 +45,7 @@ export default async function PostPage({ params }: any) {
           </div>
         )}
 
-        <h1 className="text-3xl md:text-5xl font-title mb-4 text-neutral-700 py-0">{post.title}</h1>
+        <h1 className="text-3xl md:text-5xl font-title text-neutral-700 py-0 underline mb-7 ml-1.5">{post.title}</h1>
 
         {post.description && (
           <div className="bg-neutral-700 rounded-2xl pt-2">
@@ -57,7 +57,7 @@ export default async function PostPage({ params }: any) {
               href="https://www.deviantart.com/ioartseu/gallery/all"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-3 py-4 text-white rounded-full font-title text-lg hover:bg-neutral-800 hover:shadow-lg hover:scale-105 transition-all duration-300 group bg-neutral-700 px-8 ml-1.5 mt-2.5"
+              className="inline-flex items-center gap-3 py-4 text-white font-title text-lg hover:bg-neutral-800 hover:shadow-lg hover:scale-105 transition-all duration-300 group bg-neutral-700 px-8 ml-1.5 mt-2.5 rounded-none"
             >
               <svg
                 className="w-6 h-6 animate-pulse group-hover:animate-none group-hover:scale-110 transition-transform duration-300"
@@ -72,7 +72,7 @@ export default async function PostPage({ params }: any) {
               href="https://www.etsy.com/shop/ioartseu"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-3 px-8 py-4 text-white rounded-full font-title text-lg hover:bg-neutral-800 hover:shadow-lg hover:scale-105 transition-all duration-300 group bg-neutral-700 mt-0 mb-7 ml-0"
+              className="inline-flex items-center gap-3 px-8 py-4 text-white font-title text-lg hover:bg-neutral-800 hover:shadow-lg hover:scale-105 transition-all duration-300 group bg-neutral-700 mt-0 mb-7 rounded-none ml-1.5"
             >
               <svg
                 className="w-6 h-6 animate-pulse group-hover:animate-none group-hover:scale-110 transition-transform duration-300"
