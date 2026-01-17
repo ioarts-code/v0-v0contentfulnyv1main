@@ -31,7 +31,9 @@ export default async function PostPage({ params }: any) {
     <div className="container mx-auto px-4 md:px-8 py-8 md:py-12 max-w-4xl md:pb-28">
       <Link
         href="/"
-        className="inline-block mb-8 hover:opacity-70 transition-opacity font-title text-xl text-neutral-700">
+        className="inline-block mb-8 hover:opacity-70 transition-opacity font-title text-xl text-neutral-700"
+      >
+        Home
       </Link>
 
       <article>
@@ -49,18 +51,17 @@ export default async function PostPage({ params }: any) {
 
         {post.description && (
           <div className="bg-neutral-700 rounded-2xl pt-2">
-            <h2 className="text-xl md:text-2xl font-bold mb-4 text-white px-9 py-4 pb-0 mt-0">Description</h2>
+            <h2 className="text-xl mr6d:text-2xl font-bold mb-4 text-white px-9 py-4 pb-0 mt-0">Description</h2>
             <p className="text-base leading-relaxed text-white px-9 md:text-base">{post.description}</p>
 
-
-                        <a
+            <a
               href="https://www.deviantart.com/ioartseu/gallery/all"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-3 py-4 text-white font-title text-lg hover:bg-neutral-800 hover:shadow-lg hover:scale-105 transition-all duration-300 group bg-neutral-700 px-8 ml-1.5 mt-2.5 rounded-none"
+              className="inline-flex items-center gap-3 py-4 text-white font-title text-lg hover:scale-105 transition-all duration-300 group bg-neutral-700 px-8 ml-1.5 mt-2.5 rounded-none"
             >
               <svg
-                className="w-6 h-6 animate-pulse group-hover:animate-none group-hover:scale-110 transition-transform duration-300"
+                className="w-6 h-6 group-hover:animate-pulse group-hover:scale-110 transition-transform duration-300"
                 viewBox="0 0 24 24"
                 fill="currentColor"
               >
@@ -68,14 +69,14 @@ export default async function PostPage({ params }: any) {
               </svg>
               <span>DeviantArt</span>
             </a>
-                        <a
+            <a
               href="https://www.etsy.com/shop/ioartseu"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-3 px-8 py-4 text-white font-title text-lg hover:bg-neutral-800 hover:shadow-lg hover:scale-105 transition-all duration-300 group bg-neutral-700 mt-0 mb-7 rounded-none ml-1.5"
+              className="inline-flex items-center gap-3 px-8 py-4 text-white font-title text-lg hover:scale-105 transition-all duration-300 group bg-neutral-700 mt-0 mb-7 rounded-none ml-1.5"
             >
               <svg
-                className="w-6 h-6 animate-pulse group-hover:animate-none group-hover:scale-110 transition-transform duration-300"
+                className="w-6 h-6 group-hover:animate-pulse group-hover:scale-110 transition-transform duration-300"
                 viewBox="0 0 24 24"
                 fill="currentColor"
               >
