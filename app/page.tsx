@@ -75,7 +75,7 @@ export default async function Page() {
               </Link>
               {' / '}
               <Link
-                href="https://www.etsy.com"
+                href="https://www.etsy.com/shop/ioartseu"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-gray-700 transition-colors"
