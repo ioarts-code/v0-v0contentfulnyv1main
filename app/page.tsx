@@ -62,24 +62,27 @@ export default async function Page() {
             />
           </div>
           {/* Vertical text with links */}
-          <div className="absolute right-4 top-1/2 -translate-y-1/2 flex flex-col items-center gap-4" style={{ writingMode: 'vertical-rl' }}>
-            <span className="font-title text-gray-500 text-sm tracking-widest">Follow</span>
-            <Link
-              href="https://www.deviantart.com/ioartseu/gallery/all"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="font-title text-gray-500 text-sm tracking-widest hover:text-gray-700 transition-colors"
-            >
-              DeviantArt
-            </Link>
-            <Link
-              href="https://www.etsy.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="font-title text-gray-500 text-sm tracking-widest hover:text-gray-700 transition-colors"
-            >
-              ETSY inc
-            </Link>
+          <div className="absolute right-4 top-1/2 -translate-y-1/2" style={{ writingMode: 'vertical-rl' }}>
+            <span className="font-title text-gray-500 text-sm tracking-widest">
+              Follow{' '}
+              <Link
+                href="https://www.deviantart.com/ioartseu/gallery/all"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-gray-700 transition-colors"
+              >
+                DeviantArt
+              </Link>
+              {' / '}
+              <Link
+                href="https://www.etsy.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-gray-700 transition-colors"
+              >
+                ETSY inc
+              </Link>
+            </span>
           </div>
         </div>
       </aside>
