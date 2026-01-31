@@ -29,30 +29,6 @@ export default async function PostPage({ params }: any) {
 
   return (
     <>
-      {/* Vertical text with links - fixed on viewport */}
-      <div className="fixed right-4 top-1/2 -translate-y-1/2 z-50 pointer-events-auto" style={{ writingMode: 'vertical-rl' }}>
-        <span className="font-title text-gray-500 text-sm tracking-widest">
-          Follow{' '}
-          <Link
-            href="https://www.deviantart.com/ioartseu/gallery/all"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover:text-gray-700 transition-colors"
-          >
-            DeviantArt
-          </Link>
-          {' / '}
-          <Link
-            href="https://www.etsy.com/shop/ioartseu"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover:text-gray-700 transition-colors"
-          >
-            ETSY inc
-          </Link>
-        </span>
-      </div>
-
       <div className="container mx-auto px-4 md:px-8 py-8 md:py-12 max-w-4xl md:pb-28">
         <Link
           href="/"
@@ -63,12 +39,35 @@ export default async function PostPage({ params }: any) {
 
         <article>
           {post.image && (
-            <div className="mb-8">
+            <div className="mb-8 relative">
               <img
                 src={post.image || "/placeholder.svg"}
                 alt={post.title}
                 className="w-full h-auto object-cover rounded-lg"
               />
+              {/* Vertical text with links - positioned to the right of image */}
+              <div className="absolute right-0 top-1/2 -translate-y-1/2 -mr-16 md:-mr-20" style={{ writingMode: 'vertical-rl' }}>
+                <span className="font-title text-gray-500 text-sm tracking-widest whitespace-nowrap">
+                  Follow{' '}
+                  <Link
+                    href="https://www.deviantart.com/ioartseu/gallery/all"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-gray-700 transition-colors"
+                  >
+                    DeviantArt
+                  </Link>
+                  {' / '}
+                  <Link
+                    href="https://www.etsy.com/shop/ioartseu"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-gray-700 transition-colors"
+                  >
+                    ETSY inc
+                  </Link>
+                </span>
+              </div>
             </div>
           )}
 
