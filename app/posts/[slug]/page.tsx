@@ -28,65 +28,90 @@ export default async function PostPage({ params }: any) {
   }
 
   return (
-    <div className="container mx-auto px-4 md:px-8 py-8 md:py-12 max-w-4xl md:pb-28">
-      <Link
-        href="/"
-        className="inline-block mb-8 hover:opacity-70 transition-opacity font-title text-xl text-neutral-700"
-      >
-        Home
-      </Link>
+    <>
+      <div className="container mx-auto px-4 md:px-8 py-8 md:py-12 max-w-4xl md:pb-28">
+        <Link
+          href="/"
+          className="inline-block mb-8 hover:opacity-70 transition-opacity font-title text-xl text-neutral-700"
+        >
+          Home
+        </Link>
 
-      <article>
-        {post.image && (
-          <div className="mb-8">
-            <img
-              src={post.image || "/placeholder.svg"}
-              alt={post.title}
-              className="w-full h-auto object-cover rounded-lg"
-            />
-          </div>
-        )}
+        <article>
+          {post.image && (
+            <div className="mb-8 relative">
+              <img
+                src={post.image || "/placeholder.svg"}
+                alt={post.title}
+                className="w-full h-auto object-cover rounded-lg"
+              />
+              {/* Vertical text with links - positioned to the right of image */}
+              <div className="absolute right-0 top-1/2 -translate-y-1/2 -mr-16 md:-mr-20" style={{ writingMode: 'vertical-rl' }}>
+                <span className="font-title text-gray-500 text-sm tracking-widest whitespace-nowrap">
+                  Follow{' '}
+                  <Link
+                    href="https://www.deviantart.com/ioartseu/gallery/all"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-gray-700 transition-colors"
+                  >
+                    DeviantArt
+                  </Link>
+                  {' / '}
+                  <Link
+                    href="https://www.etsy.com/shop/ioartseu"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-gray-700 transition-colors"
+                  >
+                    ETSY inc
+                  </Link>
+                </span>
+              </div>
+            </div>
+          )}
 
-        <h1 className="text-3xl md:text-5xl font-title text-neutral-700 py-0 underline mb-7 ml-1.5">{post.title}</h1>
+          <h1 className="text-3xl md:text-5xl font-title text-neutral-700 py-0 underline mb-7 ml-1.5">{post.title}</h1>
 
-        {post.description && (
-          <div className="bg-neutral-700 rounded-2xl pt-2">
-            <h2 className="text-xl md:text-2xl font-bold mb-4 text-white px-9 py-4 pb-0 mt-0">Description</h2>
-            <p className="text-base leading-relaxed text-white px-9 md:text-base">{post.description}</p>
+          {post.description && (
+            <div className="bg-neutral-700 rounded-2xl pt-2">
+              <h2 className="text-xl md:text-2xl font-bold mb-4 text-white px-9 py-4 pb-0 mt-0">Description</h2>
+              <p className="text-base leading-relaxed text-white px-9 md:text-base">{post.description}</p>
 
-            <a
-              href="https://www.deviantart.com/ioartseu/gallery/all"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-3 py-4 text-white font-title text-lg hover:scale-105 transition-all duration-300 group bg-neutral-700 px-8 ml-1.5 mt-2.5 rounded-none"
-            >
-              <svg
-                className="w-6 h-6 group-hover:animate-pulse group-hover:scale-110 transition-transform duration-300"
-                viewBox="0 0 24 24"
-                fill="currentColor"
+              <a
+                href="https://www.deviantart.com/ioartseu/gallery/all"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-3 py-4 text-white font-title text-lg hover:scale-105 transition-all duration-300 group bg-neutral-700 px-8 ml-1.5 mt-2.5 rounded-none"
               >
-                <path d="M19.207 4.794l.23-.43V0H15.07l-.436.44-2.058 3.836-.627.354H4.58v5.378h4.156l-5.02 9.378-.2.428V24h4.364l.436-.44 2.058-3.836.627-.354h7.37v-5.378h-4.156l5.02-9.378z" />
-              </svg>
-              <span>DeviantArt</span>
-            </a>
-            <a
-              href="https://www.etsy.com/shop/ioartseu"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-3 px-8 py-4 text-white font-title text-lg hover:scale-105 transition-all duration-300 group bg-neutral-700 mt-0 mb-7 rounded-none ml-1.5"
-            >
-              <svg
-                className="w-6 h-6 group-hover:animate-pulse group-hover:scale-110 transition-transform duration-300"
-                viewBox="0 0 24 24"
-                fill="currentColor"
+                <svg
+                  className="w-6 h-6 group-hover:animate-pulse group-hover:scale-110 transition-transform duration-300"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                  <path d="M19.207 4.794l.23-.43V0H15.07l-.436.44-2.058 3.836-.627.354H4.58v5.378h4.156l-5.02 9.378-.2.428V24h4.364l.436-.44 2.058-3.836.627-.354h7.37v-5.378h-4.156l5.02-9.378z" />
+                </svg>
+                <span>DeviantArt</span>
+              </a>
+              <a
+                href="https://www.etsy.com/shop/ioartseu"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-3 px-8 py-4 text-white font-title text-lg hover:scale-105 transition-all duration-300 group bg-neutral-700 mt-0 mb-7 rounded-none ml-1.5"
               >
-                <path d="M19.207 4.794l.23-.43V0H15.07l-.436.44-2.058 3.836-.627.354H4.58v5.378h4.156l-5.02 9.378-.2.428V24h4.364l.436-.44 2.058-3.836.627-.354h7.37v-5.378h-4.156l5.02-9.378z" />
-              </svg>
-              <span>Browse on Etsy</span>
-            </a>
-          </div>
-        )}
-      </article>
-    </div>
+                <svg
+                  className="w-6 h-6 group-hover:animate-pulse group-hover:scale-110 transition-transform duration-300"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                  <path d="M19.207 4.794l.23-.43V0H15.07l-.436.44-2.058 3.836-.627.354H4.58v5.378h4.156l-5.02 9.378-.2.428V24h4.364l.436-.44 2.058-3.836.627-.354h7.37v-5.378h-4.156l5.02-9.378z" />
+                </svg>
+                <span>Browse on Etsy</span>
+              </a>
+            </div>
+          )}
+        </article>
+      </div>
+    </>
   )
 }

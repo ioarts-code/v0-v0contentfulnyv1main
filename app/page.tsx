@@ -8,7 +8,31 @@ export default async function Page() {
   const allPosts = await getAllPosts(isEnabled)
 
   return (
-    <div className="flex h-screen overflow-hidden">
+    <div className="flex h-screen overflow-hidden relative">
+      {/* Vertical text with links - visible on whole site */}
+      <div className="absolute right-4 top-1/2 -translate-y-1/2 z-20" style={{ writingMode: 'vertical-rl' }}>
+        <span className="font-title text-gray-500 text-sm tracking-widest">
+          Follow{' '}
+          <Link
+            href="https://www.deviantart.com/ioartseu/gallery/all"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-gray-700 transition-colors"
+          >
+            DeviantArt
+          </Link>
+          {' / '}
+          <Link
+            href="https://www.etsy.com/shop/ioartseu"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-gray-700 transition-colors"
+          >
+            ETSY inc
+          </Link>
+        </span>
+      </div>
+
       {/* Left side - Scrollable posts */}
       <main className="w-full md:w-1/2 overflow-y-auto px-4 md:px-8 py-8 md:py-12 bg-slate-200">
         <h3 className="text-lg md:text-xl font-title mb-6 md:mb-8 text-foreground underline">Browse</h3>
@@ -60,29 +84,6 @@ export default async function Page() {
               className="object-contain rotate-0 mb-0 bg-slate-200"
               priority
             />
-          </div>
-          {/* Vertical text with links */}
-          <div className="absolute right-4 top-1/2 -translate-y-1/2" style={{ writingMode: 'vertical-rl' }}>
-            <span className="font-title text-gray-500 text-sm tracking-widest">
-              Follow{' '}
-              <Link
-                href="https://www.deviantart.com/ioartseu/gallery/all"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-gray-700 transition-colors"
-              >
-                DeviantArt
-              </Link>
-              {' / '}
-              <Link
-                href="https://www.etsy.com/shop/ioartseu"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-gray-700 transition-colors"
-              >
-                ETSY inc
-              </Link>
-            </span>
           </div>
         </div>
       </aside>
