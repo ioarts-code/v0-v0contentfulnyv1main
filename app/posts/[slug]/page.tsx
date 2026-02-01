@@ -54,7 +54,22 @@ export default async function PostPage({ params }: any) {
             <h2 className="text-xl md:text-2xl font-bold mb-4 text-white px-9 py-4 pb-0 mt-0">Description</h2>
             <p className="text-base leading-relaxed text-white px-9 md:text-base">{post.description}</p>
 
-            <div className="pb-7" />
+            <a
+              href="https://www.deviantart.com/ioartseu/gallery/all"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-3 py-4 text-white font-title text-lg hover:scale-105 transition-all duration-300 group bg-neutral-700 px-8 ml-1.5 mt-2.5 rounded-none"
+            >
+              <svg
+                className="w-6 h-6 group-hover:animate-pulse group-hover:scale-110 transition-transform duration-300"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+              >
+                <path d="M19.207 4.794l.23-.43V0H15.07l-.436.44-2.058 3.836-.627.354H4.58v5.378h4.156l-5.02 9.378-.2.428V24h4.364l.436-.44 2.058-3.836.627-.354h7.37v-5.378h-4.156l5.02-9.378z" />
+              </svg>
+              <span>DeviantArt</span>
+            </a>
+
           </div>
         )}
       </article>
