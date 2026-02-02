@@ -4,8 +4,6 @@ import "./globals.css"
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 
-import { GeistSans } from 'geist-ui-icons'
-
 import { Montserrat, Geist_Mono, Audiowide, Source_Serif_4, Geist as V0_Font_Geist, Geist_Mono as V0_Font_Geist_Mono, Source_Serif_4 as V0_Font_Source_Serif_4 } from 'next/font/google'
 
 // Initialize fonts
@@ -35,11 +33,6 @@ const sourceSerif4 = Source_Serif_4({
   subsets: ["latin"],
   weight: ["200", "300", "400", "500", "600", "700", "800", "900"],
   variable: "--font-serif",
-})
-
-const geist = GeistSans({
-  subsets: ["latin"],
-  variable: "--font-geist",
 })
 
 export const metadata = {
