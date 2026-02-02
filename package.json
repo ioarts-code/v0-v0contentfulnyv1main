@@ -19,6 +19,7 @@
     "clsx": "^2.1.1",
     "contentful-import": "latest",
     "date-fns": "latest",
+    "geist-ui-icons": "1.2.0",
     "lucide-react": "^0.454.0",
     "next": "15.5.9",
     "next-themes": "latest",

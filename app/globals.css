@@ -1,84 +1,88 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
-@custom-variant dark (&:is(.dark *));
-
-:root {
-  --background: 0 0% 100%;
-  --foreground: 0 0% 9%;
-  --card: 0 0% 100%;
-  --card-foreground: 0 0% 9%;
-  --popover: 0 0% 100%;
-  --popover-foreground: 0 0% 9%;
-  --primary: 0 0% 13%;
-  --primary-foreground: 0 0% 97%;
-  --secondary: 0 0% 96%;
-  --secondary-foreground: 0 0% 13%;
-  --muted: 0 0% 96%;
-  --muted-foreground: 0 0% 45%;
-  --accent: 0 0% 96%;
-  --accent-foreground: 0 0% 13%;
-  --destructive: 0 84% 60%;
-  --destructive-foreground: 0 0% 97%;
-  --border: 0 0% 90%;
-  --input: 0 0% 90%;
-  --ring: 0 0% 56%;
-  --chart-1: 24 75% 50%;
-  --chart-2: 173 58% 39%;
-  --chart-3: 220 70% 50%;
-  --chart-4: 43 74% 66%;
-  --chart-5: 27 87% 67%;
-  --radius: 0.625rem;
-  --sidebar: 0 0% 97%;
-  --sidebar-foreground: 0 0% 9%;
-  --sidebar-primary: 0 0% 13%;
-  --sidebar-primary-foreground: 0 0% 97%;
-  --sidebar-accent: 0 0% 96%;
-  --sidebar-accent-foreground: 0 0% 13%;
-  --sidebar-border: 0 0% 90%;
-  --sidebar-ring: 0 0% 56%;
-}
-
-.dark {
-  --background: 0 0% 9%;
-  --foreground: 0 0% 97%;
-  --card: 0 0% 9%;
-  --card-foreground: 0 0% 97%;
-  --popover: 0 0% 9%;
-  --popover-foreground: 0 0% 97%;
-  --primary: 0 0% 97%;
-  --primary-foreground: 0 0% 13%;
-  --secondary: 0 0% 17%;
-  --secondary-foreground: 0 0% 97%;
-  --muted: 0 0% 17%;
-  --muted-foreground: 0 0% 56%;
-  --accent: 0 0% 17%;
-  --accent-foreground: 0 0% 97%;
-  --destructive: 0 62% 30%;
-  --destructive-foreground: 0 84% 60%;
-  --border: 0 0% 17%;
-  --input: 0 0% 17%;
-  --ring: 0 0% 30%;
-  --chart-1: 220 70% 50%;
-  --chart-2: 160 60% 45%;
-  --chart-3: 30 80% 55%;
-  --chart-4: 280 65% 60%;
-  --chart-5: 340 75% 55%;
-  --sidebar: 0 0% 13%;
-  --sidebar-foreground: 0 0% 97%;
-  --sidebar-primary: 220 70% 50%;
-  --sidebar-primary-foreground: 0 0% 97%;
-  --sidebar-accent: 0 0% 17%;
-  --sidebar-accent-foreground: 0 0% 97%;
-  --sidebar-border: 0 0% 17%;
-  --sidebar-ring: 0 0% 30%;
-}
-
-@theme inline {
+@theme {
   --font-sans: "Montserrat", "Montserrat Fallback";
   --font-title: "Audiowide", "Audiowide Fallback", sans-serif;
   --font-mono: "Geist Mono", "Geist Mono Fallback";
   --font-serif: "Source Serif 4", "Source Serif 4 Fallback";
+}
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  --background: 0 0% 100%; /* User defined */
+  --foreground: 0 0% 9%; /* User defined */
+  --card: 0 0% 100%; /* User defined */
+  --card-foreground: 0 0% 9%; /* User defined */
+  --popover: 0 0% 100%; /* User defined */
+  --popover-foreground: 0 0% 9%; /* User defined */
+  --primary: 0 0% 13%; /* User defined */
+  --primary-foreground: 0 0% 97%; /* User defined */
+  --secondary: 0 0% 96%; /* User defined */
+  --secondary-foreground: 0 0% 13%; /* User defined */
+  --muted: 0 0% 96%; /* User defined */
+  --muted-foreground: 0 0% 45%; /* User defined */
+  --accent: 0 0% 96%; /* User defined */
+  --accent-foreground: 0 0% 13%; /* User defined */
+  --destructive: 0 84% 60%; /* User defined */
+  --destructive-foreground: 0 0% 97%; /* User defined */
+  --border: 0 0% 90%; /* User defined */
+  --input: 0 0% 90%; /* User defined */
+  --ring: 0 0% 56%; /* User defined */
+  --chart-1: 24 75% 50%; /* User defined */
+  --chart-2: 173 58% 39%; /* User defined */
+  --chart-3: 220 70% 50%; /* User defined */
+  --chart-4: 43 74% 66%; /* User defined */
+  --chart-5: 27 87% 67%; /* User defined */
+  --radius: 0.625rem; /* User defined */
+  --sidebar: 0 0% 97%; /* User defined */
+  --sidebar-foreground: 0 0% 9%; /* User defined */
+  --sidebar-primary: 0 0% 13%; /* User defined */
+  --sidebar-primary-foreground: 0 0% 97%; /* User defined */
+  --sidebar-accent: 0 0% 96%; /* User defined */
+  --sidebar-accent-foreground: 0 0% 13%; /* User defined */
+  --sidebar-border: 0 0% 90%; /* User defined */
+  --sidebar-ring: 0 0% 56%; /* User defined */
+}
+
+.dark {
+  --background: 0 0% 9%; /* User defined */
+  --foreground: 0 0% 97%; /* User defined */
+  --card: 0 0% 9%; /* User defined */
+  --card-foreground: 0 0% 97%; /* User defined */
+  --popover: 0 0% 9%; /* User defined */
+  --popover-foreground: 0 0% 97%; /* User defined */
+  --primary: 0 0% 97%; /* User defined */
+  --primary-foreground: 0 0% 13%; /* User defined */
+  --secondary: 0 0% 17%; /* User defined */
+  --secondary-foreground: 0 0% 97%; /* User defined */
+  --muted: 0 0% 17%; /* User defined */
+  --muted-foreground: 0 0% 56%; /* User defined */
+  --accent: 0 0% 17%; /* User defined */
+  --accent-foreground: 0 0% 97%; /* User defined */
+  --destructive: 0 62% 30%; /* User defined */
+  --destructive-foreground: 0 84% 60%; /* User defined */
+  --border: 0 0% 17%; /* User defined */
+  --input: 0 0% 17%; /* User defined */
+  --ring: 0 0% 30%; /* User defined */
+  --chart-1: 220 70% 50%; /* User defined */
+  --chart-2: 160 60% 45%; /* User defined */
+  --chart-3: 30 80% 55%; /* User defined */
+  --chart-4: 280 65% 60%; /* User defined */
+  --chart-5: 340 75% 55%; /* User defined */
+  --sidebar: 0 0% 13%; /* User defined */
+  --sidebar-foreground: 0 0% 97%; /* User defined */
+  --sidebar-primary: 220 70% 50%; /* User defined */
+  --sidebar-primary-foreground: 0 0% 97%; /* User defined */
+  --sidebar-accent: 0 0% 17%; /* User defined */
+  --sidebar-accent-foreground: 0 0% 97%; /* User defined */
+  --sidebar-border: 0 0% 17%; /* User defined */
+  --sidebar-ring: 0 0% 30%; /* User defined */
+}
+
+@theme inline {
+  /* optional: --font-sans, --font-serif, --font-mono if they are applied in the layout.tsx */
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-card: var(--card);

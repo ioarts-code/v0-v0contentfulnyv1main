@@ -4,14 +4,15 @@ import "./globals.css"
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 
-import { Geist, Geist_Mono, Audiowide, Source_Serif_4, Geist as V0_Font_Geist, Geist_Mono as V0_Font_Geist_Mono, Source_Serif_4 as V0_Font_Source_Serif_4 } from 'next/font/google'
+import { GeistSans } from 'geist-ui-icons'
+import { Montserrat, Geist_Mono, Audiowide, Source_Serif_4, Geist as V0_Font_Geist, Geist_Mono as V0_Font_Geist_Mono, Source_Serif_4 as V0_Font_Source_Serif_4 } from 'next/font/google'
 
 // Initialize fonts
 const _geist = V0_Font_Geist({ subsets: ['latin'], weight: ["100","200","300","400","500","600","700","800","900"] })
 const _geistMono = V0_Font_Geist_Mono({ subsets: ['latin'], weight: ["100","200","300","400","500","600","700","800","900"] })
 const _sourceSerif_4 = V0_Font_Source_Serif_4({ subsets: ['latin'], weight: ["200","300","400","500","600","700","800","900"] })
 
-const geist = Geist({
+const montserrat = Montserrat({
   subsets: ["latin"],
   variable: "--font-sans",
   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
@@ -35,6 +36,11 @@ const sourceSerif4 = Source_Serif_4({
   variable: "--font-serif",
 })
 
+const geist = GeistSans({
+  subsets: ["latin"],
+  variable: "--font-geist",
+})
+
 export const metadata = {
   title: "Blog",
   description: "A blog built with Next.js and Contentful.",
@@ -52,7 +58,7 @@ export default function RootLayout({
         <link rel="stylesheet" href="https://use.typekit.net/rlu5ntk.css" />
       </head>
       <body
-        className={`${geist.variable} ${geistMono.variable} ${audiowide.variable} ${sourceSerif4.variable} font-sans flex flex-col min-h-screen`}
+        className={`${montserrat.variable} ${geistMono.variable} ${audiowide.variable} ${sourceSerif4.variable} font-sans flex flex-col min-h-screen`}
       >
         <Header />
         <main className="flex-1 bg-slate-200">{children}</main>
