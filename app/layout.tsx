@@ -4,23 +4,23 @@ import "./globals.css"
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 
-import { Exo, Audiowide, Source_Serif_4, Geist_Mono, Geist as V0_Font_Geist, Geist_Mono as V0_Font_Geist_Mono, Source_Serif_4 as V0_Font_Source_Serif_4 } from 'next/font/google'
+import { Audiowide, Exo, Source_Serif_4, Geist_Mono, Geist as V0_Font_Geist, Geist_Mono as V0_Font_Geist_Mono, Source_Serif_4 as V0_Font_Source_Serif_4 } from 'next/font/google'
 
 // Initialize fonts
 const _geist = V0_Font_Geist({ subsets: ['latin'], weight: ["100","200","300","400","500","600","700","800","900"] })
 const _geistMono = V0_Font_Geist_Mono({ subsets: ['latin'], weight: ["100","200","300","400","500","600","700","800","900"] })
 const _sourceSerif_4 = V0_Font_Source_Serif_4({ subsets: ['latin'], weight: ["200","300","400","500","600","700","800","900"] })
 
-const exo = Exo({
-  subsets: ["latin"],
-  variable: "--font-sans",
-  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
-})
-
 const audiowide = Audiowide({
   weight: "400",
   subsets: ["latin"],
-  variable: "--font-title",
+  variable: "--font-sans",
+})
+
+const exo = Exo({
+  subsets: ["latin"],
+  variable: "--font-display",
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
 })
 
 const sourceSerif4 = Source_Serif_4({
@@ -52,7 +52,7 @@ export default function RootLayout({
         <link rel="stylesheet" href="https://use.typekit.net/rlu5ntk.css" />
       </head>
       <body
-        className={`${exo.variable} ${audiowide.variable} ${sourceSerif4.variable} ${geistMono.variable} font-sans flex flex-col min-h-screen`}
+        className={`${audiowide.variable} ${exo.variable} ${sourceSerif4.variable} ${geistMono.variable} font-sans flex flex-col min-h-screen`}
       >
         <Header />
         <main className="flex-1 bg-slate-200">{children}</main>
