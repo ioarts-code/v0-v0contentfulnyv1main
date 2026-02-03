@@ -62,29 +62,6 @@
 
 .dark {
   color-scheme: dark;
-
-  @theme {
-    --color-background: hsl(0 0% 9%);
-    --color-foreground: hsl(0 0% 97%);
-    --color-card: hsl(0 0% 9%);
-    --color-card-foreground: hsl(0 0% 97%);
-    --color-popover: hsl(0 0% 9%);
-    --color-popover-foreground: hsl(0 0% 97%);
-    --color-primary: hsl(0 0% 97%);
-    --color-primary-foreground: hsl(0 0% 13%);
-    --color-secondary: hsl(0 0% 17%);
-    --color-secondary-foreground: hsl(0 0% 97%);
-    --color-muted: hsl(0 0% 17%);
-    --color-muted-foreground: hsl(0 0% 56%);
-    --color-accent: hsl(0 0% 17%);
-    --color-accent-foreground: hsl(0 0% 97%);
-    --color-destructive: hsl(0 62% 30%);
-    --color-destructive-foreground: hsl(0 84% 60%);
-    --color-border: hsl(0 0% 17%);
-    --color-input: hsl(0 0% 17%);
-    --color-ring: hsl(0 0% 30%);
-  }
-
   --background: hsl(0 0% 9%);
   --foreground: hsl(0 0% 97%);
   --card: hsl(0 0% 9%);
