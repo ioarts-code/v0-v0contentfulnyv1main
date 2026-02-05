@@ -32,7 +32,7 @@ export default async function PostPage({ params }: any) {
     <div className="container mx-auto px-4 md:px-8 py-8 md:py-12 max-w-4xl md:pb-28">
       <Link
         href="/"
-        className="inline-block mb-8 hover:opacity-70 transition-opacity font-title text-xl bg-neutral-400 text-white px-9"
+        className="inline-block mb-8 hover:opacity-70 transition-opacity font-title text-xl bg-neutral-300 text-white px-9"
       >
         Home
       </Link>
