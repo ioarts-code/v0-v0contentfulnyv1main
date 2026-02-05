@@ -11,7 +11,7 @@ export default async function Page() {
     <div className="flex h-screen overflow-hidden">
       {/* Left side - Scrollable posts */}
       <main className="w-full md:w-1/2 overflow-y-auto px-4 md:px-8 py-8 md:py-12 bg-slate-200">
-        <h3 className="text-lg md:text-xl font-title mb-6 md:mb-8 text-white bg-neutral-700 ml-0 pl-1.5 text-left">Browse</h3>
+        <h3 className="text-lg md:text-xl font-title mb-6 md:mb-8 text-white ml-0 pl-1.5 text-left bg-neutral-300">Browse</h3>
 
         {allPosts.length === 0 ? (
           <div className="border-2 border-destructive rounded-lg p-8 bg-destructive/10">
