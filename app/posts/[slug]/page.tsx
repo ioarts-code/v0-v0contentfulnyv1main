@@ -65,7 +65,7 @@ export default async function PostPage({ params }: any) {
               href="https://www.deviantart.com/ioartseu/gallery/all"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-3 text-white font-title text-lg hover:scale-105 transition-all duration-300 group bg-transparent px-6 ml-9 mb-8 rounded-lg border-3 border-white py-2.5"
+              className="inline-flex items-center gap-3 text-white font-title text-lg hover:scale-105 transition-all duration-300 group bg-transparent px-6 ml-9 mb-8 rounded-lg border-3 border-white py-2.5 hover:bg-black"
             >
               <svg
                 className="w-6 h-6 group-hover:animate-pulse group-hover:scale-110 transition-transform duration-300"
