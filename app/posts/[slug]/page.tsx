@@ -32,7 +32,7 @@ export default async function PostPage({ params }: any) {
     <div className="container mx-auto px-4 md:px-8 py-8 md:py-12 max-w-4xl md:pb-28">
       <Link
         href="/"
-        className="inline-block mb-8 hover:opacity-70 transition-opacity font-title text-xl text-neutral-700 px-4 px-4 px-5g-neutral-700 bg-slate-300 bg-slate-50 bg-white bg-black bg-transparent bg-slate-50 bg-gray-500 bg-neutral-950 bg-stone-950 bg-stone-400 bg-red-100 bg-stone-100 bg-neutral-700 bg-neutral-700 bg-white"
+        className="inline-block mb-8 hover:opacity-70 transition-opacity font-title text-xl text-neutral-700"
       >
         Home
       </Link>
@@ -53,7 +53,8 @@ export default async function PostPage({ params }: any) {
         </h1>
 
         {post.description && (
-          <div className="rounded-2xl pt-2 mb-8 border-2 border-white bg-transparent<h2 className="text-xl md:text-2xl font-bold mb-4 text-white px-9 py-4 pb-0 mt-0">
+          <div className="rounded-2xl pt-2 mb-8 border-2 border-white bg-neutral-300">
+            <h2 className="text-xl md:text-2xl font-bold mb-4 text-white px-9 py-4 pb-0 mt-0">
               Description
             </h2>
             <p className="text-base leading-relaxed text-white px-9 md:text-base mb-6">
