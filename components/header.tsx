@@ -79,14 +79,14 @@ export function Header() {
       </div>
 
       {/* Navigation Menu - moved after the line at x: 920px */}
-      <nav className="absolute left-4 md:left-[920px] top-4 md:top-[174px] flex gap-4 md:gap-8 text-sm md:text-lg font-title items-center ml-11 mb-0 z-10">
+      <nav className="absolute left-4 md:left-[920px] top-4 md:top-[174px] flex gap-4 md:gap-8 text-sm md:text-lg font-title items-center ml-11 mb-0 z-10 px-4 bg-neutral-300">
         <Link
           href="https://www.deviantart.com/ioartseu/gallery/all"
-          className="hover:opacity-70 transition-opacity font-black text-stone-700"
+          className="hover:opacity-70 transition-opacity font-black text-white"
         >
           home
         </Link>
-        <Link href="/" className="hover:opacity-70 transition-opacity font-black text-neutral-700">
+        <Link href="/" className="hover:opacity-70 transition-opacity font-black text-white">
           make
         </Link>
       </nav>
