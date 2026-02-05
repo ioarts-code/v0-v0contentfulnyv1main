@@ -43,20 +43,29 @@ export default async function PostPage({ params }: any) {
             <img
               src={post.image || "/placeholder.svg"}
               alt={post.title}
-              className="w-full h-auto object-cover rounded-lg bg-transparent bg-transparent bg-black bg-background bg-white bg-transparent bg-slate-300 bg-slate-300 bg-slate-100"
+              className="w-full h-auto object-cover rounded-lg"
             />
           </div>
         )}
 
-        <h1 className="text-3xl md:text-5xl font-title py-0 underline mb-7 ml-1.5 text-white      {post.description && (
-          <div className="rounded-2xl pt-2 bg-transparent<h2 className="text-xl md:text-2xl font-bold mb-4 text-white px-9 py-4 pb-0 mt-0">Description</h2>
-            <p className="text-base leading-relaxed text-white px-9 md:text-base">{post.description}</p>
+        <h1 className="text-3xl md:text-5xl font-title py-0 underline mb-7 ml-1.5 text-white">
+          {post.title}
+        </h1>
+
+        {post.description && (
+          <div className="rounded-2xl pt-2 bg-neutral-900">
+            <h2 className="text-xl md:text-2xl font-bold mb-4 text-white px-9 py-4 pb-0 mt-0">
+              Description
+            </h2>
+            <p className="text-base leading-relaxed text-white px-9 md:text-base mb-6">
+              {post.description}
+            </p>
 
             <a
-          bg-neutral-700 rounded-2xl pt-2 border-2 border-2 border border-0 border-solid border-solid border-none border-none border-whitet.com/ioartseu/gallery/all"
+              href="https://www.deviantart.com/ioartseu/gallery/all"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-3 text-white font-title text-lg hover:scale-105 transition-all duration-300 group bg-neutral-700 px-6 ml-[32px] mb-8 rounded-lg border-3 border-white mt-3.5 py-2.5"
+              className="inline-flex items-center gap-3 text-white font-title text-lg hover:scale-105 transition-all duration-300 group bg-neutral-700 px-6 ml-8 mb-8 rounded-lg border-3 border-white py-2.5"
             >
               <svg
                 className="w-6 h-6 group-hover:animate-pulse group-hover:scale-110 transition-transform duration-300"
@@ -67,7 +76,6 @@ export default async function PostPage({ params }: any) {
               </svg>
               <span>DeviantArt</span>
             </a>
-
           </div>
         )}
       </article>
