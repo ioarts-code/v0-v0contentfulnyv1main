@@ -43,7 +43,7 @@ export default async function PostPage({ params }: any) {
             <img
               src={post.image || "/placeholder.svg"}
               alt={post.title}
-              className="w-full h-auto object-cover rounded-lg bg-slate-300 bg-slate-300 bg-slate-100"
+              className="w-full h-auto object-cover rounded-lg bg-transparent bg-transparent bg-black bg-background bg-white bg-transparent bg-slate-300 bg-slate-300 bg-slate-100"
             />
           </div>
         )}
