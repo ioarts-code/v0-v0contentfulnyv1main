@@ -12,8 +12,9 @@ export async function generateStaticParams() {
 
 export default async function PostPage({ params }: any) {
   const { slug } = await params
+  const decodedSlug = decodeURIComponent(slug)
   const { isEnabled } = await draftMode()
-  const { post } = await getPostAndMorePosts(slug, isEnabled)
+  const { post } = await getPostAndMorePosts(decodedSlug, isEnabled)
 
   if (!post) {
     return (

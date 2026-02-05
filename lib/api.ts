@@ -87,6 +87,7 @@ export async function getAllPosts(isDraftMode: boolean): Promise<any[]> {
 }
 
 export async function getPostAndMorePosts(slug: string, preview: boolean): Promise<any> {
+  console.log("[v0] getPostAndMorePosts called with slug:", slug, "preview:", preview)
   const entry = await fetchGraphQL(
     `query {
       titleCollection(where: { slug: "${slug}" }, preview: ${preview ? "true" : "false"}, limit: 1) {
@@ -97,6 +98,7 @@ export async function getPostAndMorePosts(slug: string, preview: boolean): Promi
     }`,
     preview,
   )
+  console.log("[v0] Contentful response for slug:", slug, JSON.stringify(entry?.data?.titleCollection?.items))
   const entries = await fetchGraphQL(
     `query {
       titleCollection(where: { slug_not_in: "${slug}" }, order: title_DESC, preview: ${
