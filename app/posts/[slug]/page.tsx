@@ -53,8 +53,7 @@ export default async function PostPage({ params }: any) {
         </h1>
 
         {post.description && (
-          <div className="rounded-2xl pt-2 mb-8 bg-neutral-300 border-2 border-white">
-            <h2 className="text-xl md:text-2xl font-bold mb-4 text-white px-9 py-4 pb-0 mt-0">
+          <div className="rounded-2xl pt-2 mb-8 border-2 border-white bg-transparent<h2 className="text-xl md:text-2xl font-bold mb-4 text-white px-9 py-4 pb-0 mt-0">
               Description
             </h2>
             <p className="text-base leading-relaxed text-white px-9 md:text-base mb-6">
