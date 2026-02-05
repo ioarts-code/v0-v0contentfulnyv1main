@@ -48,7 +48,7 @@ export default async function PostPage({ params }: any) {
           </div>
         )}
 
-        <h1 className="text-3xl md:text-5xl font-title py-0 underline mb-7 ml-1.5">
+        <h1 className="text-3xl md:text-5xl font-title py-0 underline mb-7 ml-1.5 text-white text-white text-black">
           {post.title}
         </h1>
 
