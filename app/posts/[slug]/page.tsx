@@ -48,16 +48,16 @@ export default async function PostPage({ params }: any) {
           </div>
         )}
 
-        <h1 className="text-3xl md:text-5xl font-title py-0 underline mb-7 ml-1.5 text-white">
+        <h1 className="text-3xl md:text-5xl font-title py-0 underline mb-7 ml-1.5 text-black">
           {post.title}
         </h1>
 
         {post.description && (
-          <div className="pt-2 mb-8 border-2 border-white">
-            <h2 className="text-xl md:text-2xl font-bold mb-4 text-white px-9 py-4 pb-0 mt-0">
+          <div className="pt-2 mb-8 border-2 border-black">
+            <h2 className="text-xl md:text-2xl font-bold mb-4 text-black px-9 py-4 pb-0 mt-0">
               Description
             </h2>
-            <p className="text-base leading-relaxed text-white px-9 md:text-base mb-6">
+            <p className="text-base leading-relaxed text-black px-9 md:text-base mb-6">
               {post.description}
             </p>
 
